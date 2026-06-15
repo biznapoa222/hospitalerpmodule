@@ -1,0 +1,97 @@
+{
+ "doctype": "DocType",
+ "module_name": "HRM",
+ "name": "Shift Type",
+ "description": "Define shift types with timings and rules",
+ "fields": [
+  {
+   "fieldname": "shift_type",
+   "label": "Shift Type",
+   "fieldtype": "Data",
+   "unique": 1,
+   "req": 1
+  },
+  {
+   "fieldname": "start_time",
+   "label": "Start Time",
+   "fieldtype": "Time",
+   "req": 1
+  },
+  {
+   "fieldname": "end_time",
+   "label": "End Time",
+   "fieldtype": "Time",
+   "req": 1
+  },
+  {
+   "fieldname": "working_hours",
+   "label": "Working Hours",
+   "fieldtype": "Float",
+   "read_only": 1
+  },
+  {
+   "fieldname": "break_start_time",
+   "label": "Break Start Time",
+   "fieldtype": "Time"
+  },
+  {
+   "fieldname": "break_end_time",
+   "label": "Break End Time",
+   "fieldtype": "Time"
+  },
+  {
+   "fieldname": "break_duration",
+   "label": "Break Duration (Minutes)",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "late_entry_grace_period",
+   "label": "Late Entry Grace Period (Minutes)",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "early_exit_grace_period",
+   "label": "Early Exit Grace Period (Minutes)",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "overtime_allowed",
+   "label": "Overtime Allowed",
+   "fieldtype": "Check",
+   "default": 1
+  },
+  {
+   "fieldname": "overtime_rate",
+   "label": "Overtime Rate (Multiplier)",
+   "fieldtype": "Float",
+   "default": 1.5
+  },
+  {
+   "fieldname": "is_night_shift",
+   "label": "Is Night Shift",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "weekly_off_days",
+   "label": "Weekly Off Days",
+   "fieldtype": "Data",
+   "description": "Comma separated days (e.g., Saturday,Sunday)"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "HR Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  }
+ ]
+}

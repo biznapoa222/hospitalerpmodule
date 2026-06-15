@@ -1,0 +1,80 @@
+{
+ "doctype": "DocType",
+ "module_name": "HRM",
+ "name": "Shift Assignment",
+ "description": "Assign shift types to employees",
+ "fields": [
+  {
+   "fieldname": "employee",
+   "label": "Employee",
+   "fieldtype": "Link",
+   "options": "Employee",
+   "req": 1
+  },
+  {
+   "fieldname": "shift_type",
+   "label": "Shift Type",
+   "fieldtype": "Link",
+   "options": "Shift Type",
+   "req": 1
+  },
+  {
+   "fieldname": "shift_date",
+   "label": "Shift Date",
+   "fieldtype": "Date",
+   "req": 1
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Select",
+   "options": "Active\nCompleted\nCancelled",
+   "default": "Active"
+  },
+  {
+   "fieldname": "clock_in_time",
+   "label": "Clock In Time",
+   "fieldtype": "Time"
+  },
+  {
+   "fieldname": "clock_out_time",
+   "label": "Clock Out Time",
+   "fieldtype": "Time"
+  },
+  {
+   "fieldname": "total_hours_worked",
+   "label": "Total Hours Worked",
+   "fieldtype": "Float",
+   "read_only": 1
+  },
+  {
+   "fieldname": "overtime_hours",
+   "label": "Overtime Hours",
+   "fieldtype": "Float",
+   "read_only": 1
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "HR Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Employee",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  }
+ ]
+}
