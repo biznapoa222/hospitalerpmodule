@@ -1,0 +1,109 @@
+{
+ "doctype": "DocType",
+ "module_name": "HRM",
+ "name": "Competency",
+ "description": "Employee competency tracking and assessment system",
+ "fields": [
+  {
+   "fieldname": "employee",
+   "label": "Employee",
+   "fieldtype": "Link",
+   "options": "Employee",
+   "req": 1
+  },
+  {
+   "fieldname": "competency_name",
+   "label": "Competency Name",
+   "fieldtype": "Data",
+   "req": 1
+  },
+  {
+   "fieldname": "competency_type",
+   "label": "Competency Type",
+   "fieldtype": "Select",
+   "options": "Technical\nSoft Skills\nLeadership\nCompliance\nBehavioral"
+  },
+  {
+   "fieldname": "current_level",
+   "label": "Current Level",
+   "fieldtype": "Select",
+   "options": "Beginner\nIntermediate\nAdvanced\nExpert",
+   "default": "Beginner"
+  },
+  {
+   "fieldname": "target_level",
+   "label": "Target Level",
+   "fieldtype": "Select",
+   "options": "Intermediate\nAdvanced\nExpert"
+  },
+  {
+   "fieldname": "assessment_date",
+   "label": "Assessment Date",
+   "fieldtype": "Date",
+   "req": 1
+  },
+  {
+   "fieldname": "assessor",
+   "label": "Assessor",
+   "fieldtype": "Link",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "score",
+   "label": "Score",
+   "fieldtype": "Float",
+   "default": 0
+  },
+  {
+   "fieldname": "max_score",
+   "label": "Max Score",
+   "fieldtype": "Float",
+   "default": 100
+  },
+  {
+   "fieldname": "comments",
+   "label": "Comments",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "next_steps",
+   "label": "Next Steps",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "training_required",
+   "label": "Training Required",
+   "fieldtype": "Data"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "HR Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "HR Clerk",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Employee",
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "delete": 0
+  }
+ ]
+}

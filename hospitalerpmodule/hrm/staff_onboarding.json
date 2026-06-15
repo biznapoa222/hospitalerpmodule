@@ -1,0 +1,93 @@
+{
+ "doctype": "DocType",
+ "module_name": "HRM",
+ "name": "Staff Onboarding",
+ "description": "Employee onboarding process with checklists and documentation",
+ "fields": [
+  {
+   "fieldname": "employee",
+   "label": "Employee",
+   "fieldtype": "Link",
+   "options": "Employee",
+   "req": 1
+  },
+  {
+   "fieldname": "joining_date",
+   "label": "Joining Date",
+   "fieldtype": "Date",
+   "req": 1
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Select",
+   "options": "Not Started\nIn Progress\nCompleted\nOn Hold",
+   "default": "Not Started"
+  },
+  {
+   "fieldname": "assigned_by",
+   "label": "Assigned By",
+   "fieldtype": "Link",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "start_date",
+   "label": "Start Date",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "completion_date",
+   "label": "Completion Date",
+   "fieldtype": "Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "onboarding_checklist",
+   "label": "Onboarding Checklist",
+   "fieldtype": "Table",
+   "options": "Onboarding Checklist Item"
+  },
+  {
+   "fieldname": "policy_acknowledgments",
+   "label": "Policy Acknowledgments",
+   "fieldtype": "Table",
+   "options": "Policy Acknowledgment"
+  },
+  {
+   "fieldname": "competency_assessment",
+   "label": "Competency Assessment",
+   "fieldtype": "Table",
+   "options": "Competency Assessment Item"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "HR Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "HR Clerk",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Employee",
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "delete": 0
+  }
+ ]
+}

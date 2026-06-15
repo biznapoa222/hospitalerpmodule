@@ -1,0 +1,118 @@
+{
+ "doctype": "DocType",
+ "module_name": "HRM",
+ "name": "Employee",
+ "description": "Employee master data with personal, professional, and employment details",
+ "fields": [
+  {
+   "fieldname": "employee_id",
+   "label": "Employee ID",
+   "fieldtype": "Data",
+   "req": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "first_name",
+   "label": "First Name",
+   "fieldtype": "Data",
+   "req": 1
+  },
+  {
+   "fieldname": "last_name",
+   "label": "Last Name",
+   "fieldtype": "Data",
+   "req": 1
+  },
+  {
+   "fieldname": "email",
+   "label": "Email",
+   "fieldtype": "Data",
+   "req": 1
+  },
+  {
+   "fieldname": "phone",
+   "label": "Phone",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "date_of_joining",
+   "label": "Date of Joining",
+   "fieldtype": "Date",
+   "req": 1
+  },
+  {
+   "fieldname": "designation",
+   "label": "Designation",
+   "fieldtype": "Link",
+   "options": "Designation"
+  },
+  {
+   "fieldname": "department",
+   "label": "Department",
+   "fieldtype": "Link",
+   "options": "Department"
+  },
+  {
+   "fieldname": "employment_type",
+   "label": "Employment Type",
+   "fieldtype": "Select",
+   "options": "Full-time\nPart-time\nContract\nIntern"
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Select",
+   "options": "Active\nInactive\nSuspended\nTerminated",
+   "default": "Active"
+  },
+  {
+   "fieldname": "basic_salary",
+   "label": "Basic Salary",
+   "fieldtype": "Currency",
+   "req": 1
+  },
+  {
+   "fieldname": "bank_account",
+   "label": "Bank Account",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "emergency_contact",
+   "label": "Emergency Contact",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "address",
+   "label": "Address",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "profile_image",
+   "label": "Profile Image",
+   "fieldtype": "Attach Image"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "HR Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "HR Clerk",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  }
+ ]
+}

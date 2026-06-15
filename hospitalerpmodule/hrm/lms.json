@@ -1,0 +1,110 @@
+{
+ "doctype": "DocType",
+ "module_name": "HRM",
+ "name": "LMS",
+ "description": "Learning Management System for tracking employee training and certifications",
+ "fields": [
+  {
+   "fieldname": "employee",
+   "label": "Employee",
+   "fieldtype": "Link",
+   "options": "Employee",
+   "req": 1
+  },
+  {
+   "fieldname": "course_name",
+   "label": "Course Name",
+   "fieldtype": "Data",
+   "req": 1
+  },
+  {
+   "fieldname": "course_type",
+   "label": "Course Type",
+   "fieldtype": "Select",
+   "options": "Technical\nSoft Skills\nCompliance\nLeadership\nCertification"
+  },
+  {
+   "fieldname": "provider",
+   "label": "Provider",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "start_date",
+   "label": "Start Date",
+   "fieldtype": "Date",
+   "req": 1
+  },
+  {
+   "fieldname": "end_date",
+   "label": "End Date",
+   "fieldtype": "Date",
+   "req": 1
+  },
+  {
+   "fieldname": "duration_hours",
+   "label": "Duration (Hours)",
+   "fieldtype": "Float",
+   "req": 1
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Select",
+   "options": "Enrolled\nIn Progress\nCompleted\nWithdrawn",
+   "default": "Enrolled"
+  },
+  {
+   "fieldname": "completion_score",
+   "label": "Completion Score",
+   "fieldtype": "Float",
+   "default": 0
+  },
+  {
+   "fieldname": "certificate_url",
+   "label": "Certificate URL",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "cme_credits",
+   "label": "CME Credits",
+   "fieldtype": "Float",
+   "default": 0
+  },
+  {
+   "fieldname": "training_certificate",
+   "label": "Training Certificate",
+   "fieldtype": "Link",
+   "options": "Training Certificate"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "HR Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "HR Clerk",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Employee",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  }
+ ]
+}

@@ -1,0 +1,111 @@
+{
+ "doctype": "DocType",
+ "module_name": "HRM",
+ "name": "Policy Acknowledgment",
+ "description": "Employee policy acknowledgment and compliance tracking",
+ "fields": [
+  {
+   "fieldname": "employee",
+   "label": "Employee",
+   "fieldtype": "Link",
+   "options": "Employee",
+   "req": 1
+  },
+  {
+   "fieldname": "policy_name",
+   "label": "Policy Name",
+   "fieldtype": "Data",
+   "req": 1
+  },
+  {
+   "fieldname": "policy_type",
+   "label": "Policy Type",
+   "fieldtype": "Select",
+   "options": "Code of Conduct\nConfidentiality\nData Privacy\nAnti-Bribery\nHealth & Safety\nEqual Opportunity\nOther"
+  },
+  {
+   "fieldname": "acknowledgment_date",
+   "label": "Acknowledgment Date",
+   "fieldtype": "Date",
+   "req": 1,
+   "default": "today"
+  },
+  {
+   "fieldname": "acknowledged_by",
+   "label": "Acknowledged By",
+   "fieldtype": "Link",
+   "options": "Employee",
+   "req": 1
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Select",
+   "options": "Pending\nAcknowledged\nExpired",
+   "default": "Pending"
+  },
+  {
+   "fieldname": "expiry_date",
+   "label": "Expiry Date",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "policy_document",
+   "label": "Policy Document",
+   "fieldtype": "Attach"
+  },
+  {
+   "fieldname": "acknowledgement_text",
+   "label": "Acknowledgment Text",
+   "fieldtype": "Text",
+   "read_only": 1
+  },
+  {
+   "fieldname": "compliance_score",
+   "label": "Compliance Score",
+   "fieldtype": "Float",
+   "default": 100
+  },
+  {
+   "fieldname": "review_date",
+   "label": "Review Date",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "next_review_due",
+   "label": "Next Review Due",
+   "fieldtype": "Date",
+   "read_only": 1
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "HR Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "HR Clerk",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Employee",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  }
+ ]
+}

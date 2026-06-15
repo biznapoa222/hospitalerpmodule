@@ -1,0 +1,106 @@
+{
+ "doctype": "DocType",
+ "module_name": "HRM",
+ "name": "Leave",
+ "description": "Employee leave management with leave types, balances, and approval workflow",
+ "fields": [
+  {
+   "fieldname": "employee",
+   "label": "Employee",
+   "fieldtype": "Link",
+   "options": "Employee",
+   "req": 1
+  },
+  {
+   "fieldname": "leave_type",
+   "label": "Leave Type",
+   "fieldtype": "Link",
+   "options": "Leave Type",
+   "req": 1
+  },
+  {
+   "fieldname": "from_date",
+   "label": "From Date",
+   "fieldtype": "Date",
+   "req": 1
+  },
+  {
+   "fieldname": "to_date",
+   "label": "To Date",
+   "fieldtype": "Date",
+   "req": 1
+  },
+  {
+   "fieldname": "total_days",
+   "label": "Total Days",
+   "fieldtype": "Float",
+   "read_only": 1
+  },
+  {
+   "fieldname": "applied_on",
+   "label": "Applied On",
+   "fieldtype": "Date",
+   "default": "today"
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Select",
+   "options": "Draft\nSubmitted\nApproved\nRejected\nCancelled",
+   "default": "Draft"
+  },
+  {
+   "fieldname": "approver",
+   "label": "Approver",
+   "fieldtype": "Link",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "approved_on",
+   "label": "Approved On",
+   "fieldtype": "Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reason",
+   "label": "Reason",
+   "fieldtype": "Text",
+   "req": 1
+  },
+  {
+   "fieldname": "contact_details",
+   "label": "Contact Details During Leave",
+   "fieldtype": "Text"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "HR Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "HR Clerk",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Employee",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  }
+ ]
+}

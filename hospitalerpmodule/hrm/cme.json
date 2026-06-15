@@ -1,0 +1,115 @@
+{
+ "doctype": "DocType",
+ "module_name": "HRM",
+ "name": "CME",
+ "description": "Continuing Medical Education (CME) credits tracking and management",
+ "fields": [
+  {
+   "fieldname": "employee",
+   "label": "Employee",
+   "fieldtype": "Link",
+   "options": "Employee",
+   "req": 1
+  },
+  {
+   "fieldname": "activity_title",
+   "label": "Activity Title",
+   "fieldtype": "Data",
+   "req": 1
+  },
+  {
+   "fieldname": "activity_type",
+   "label": "Activity Type",
+   "fieldtype": "Select",
+   "options": "Conference\nWorkshop\nWebinar\nJournal Article\nResearch\nClinical Rotation"
+  },
+  {
+   "fieldname": "provider",
+   "label": "Provider",
+   "fieldtype": "Data",
+   "req": 1
+  },
+  {
+   "fieldname": "activity_date",
+   "label": "Activity Date",
+   "fieldtype": "Date",
+   "req": 1
+  },
+  {
+   "fieldname": "duration_hours",
+   "label": "Duration (Hours)",
+   "fieldtype": "Float",
+   "req": 1
+  },
+  {
+   "fieldname": "cme_credits_earned",
+   "label": "CME Credits Earned",
+   "fieldtype": "Float",
+   "req": 1
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Select",
+   "options": "Pending\nApproved\nRejected",
+   "default": "Pending"
+  },
+  {
+   "fieldname": "approval_date",
+   "label": "Approval Date",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "approval_remarks",
+   "label": "Approval Remarks",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "certificate_url",
+   "label": "Certificate URL",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "total_credits_year_to_date",
+   "label": "Total Credits Year to Date",
+   "fieldtype": "Float",
+   "read_only": 1
+  },
+  {
+   "fieldname": "remaining_credits_limit",
+   "label": "Remaining Credits Limit",
+   "fieldtype": "Float",
+   "read_only": 1
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "HR Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "HR Clerk",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Employee",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  }
+ ]
+}

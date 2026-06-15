@@ -1,0 +1,68 @@
+{
+ "doctype": "DocType",
+ "module_name": "HRM",
+ "name": "Training Certificate",
+ "description": "Training completion certificates with CME credits",
+ "fields": [
+  {
+   "fieldname": "employee",
+   "label": "Employee",
+   "fieldtype": "Link",
+   "options": "Employee",
+   "req": 1
+  },
+  {
+   "fieldname": "training_name",
+   "label": "Training Name",
+   "fieldtype": "Data",
+   "req": 1
+  },
+  {
+   "fieldname": "trainer",
+   "label": "Trainer",
+   "fieldtype": "Link",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "completion_date",
+   "label": "Completion Date",
+   "fieldtype": "Date",
+   "req": 1
+  },
+  {
+   "fieldname": "cme_credits",
+   "label": "CME Credits",
+   "fieldtype": "Float",
+   "req": 1,
+   "default": 0
+  },
+  {
+   "fieldname": "certificate_url",
+   "label": "Certificate URL",
+   "fieldtype": "Data",
+   "read_only": 1
+  },
+  {
+   "fieldname": "training_year",
+   "label": "Training Year",
+   "fieldtype": "Data",
+   "read_only": 1
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "HR Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  }
+ ]
+}

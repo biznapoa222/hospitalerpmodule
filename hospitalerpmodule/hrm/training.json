@@ -1,0 +1,104 @@
+{
+ "doctype": "DocType",
+ "module_name": "HRM",
+ "name": "Training",
+ "description": "Training and development program management",
+ "fields": [
+  {
+   "fieldname": "training_name",
+   "label": "Training Name",
+   "fieldtype": "Data",
+   "req": 1
+  },
+  {
+   "fieldname": "training_type",
+   "label": "Training Type",
+   "fieldtype": "Select",
+   "options": "Workshop\nSeminar\nOnline Course\nCertification\nOn-the-job Training"
+  },
+  {
+   "fieldname": "employee",
+   "label": "Employee",
+   "fieldtype": "Link",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "trainer",
+   "label": "Trainer",
+   "fieldtype": "Link",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "start_date",
+   "label": "Start Date",
+   "fieldtype": "Date",
+   "req": 1
+  },
+  {
+   "fieldname": "end_date",
+   "label": "End Date",
+   "fieldtype": "Date",
+   "req": 1
+  },
+  {
+   "fieldname": "duration_hours",
+   "label": "Duration (Hours)",
+   "fieldtype": "Float",
+   "req": 1
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Select",
+   "options": "Scheduled\nIn Progress\nCompleted\nCancelled",
+   "default": "Scheduled"
+  },
+  {
+   "fieldname": "certificate_url",
+   "label": "Certificate URL",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "completion_score",
+   "label": "Completion Score",
+   "fieldtype": "Float",
+   "default": 0
+  },
+  {
+   "fieldname": "cme_credits",
+   "label": "CME Credits",
+   "fieldtype": "Float",
+   "default": 0
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "HR Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "HR Clerk",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Employee",
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "delete": 0
+  }
+ ]
+}

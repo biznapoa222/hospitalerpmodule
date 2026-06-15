@@ -1,0 +1,75 @@
+{
+ "doctype": "DocType",
+ "module_name": "HRM",
+ "name": "Leave Type",
+ "description": "Leave type configuration with balance tracking and policies",
+ "fields": [
+  {
+   "fieldname": "leave_type",
+   "label": "Leave Type",
+   "fieldtype": "Data",
+   "req": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "total_leaves",
+   "label": "Total Leaves",
+   "fieldtype": "Float",
+   "req": 1,
+   "default": 0
+  },
+  {
+   "fieldname": "used_leaves",
+   "label": "Used Leaves",
+   "fieldtype": "Float",
+   "read_only": 1,
+   "default": 0
+  },
+  {
+   "fieldname": "remaining_leaves",
+   "label": "Remaining Leaves",
+   "fieldtype": "Float",
+   "read_only": 1,
+   "default": 0
+  },
+  {
+   "fieldname": "is_paid",
+   "label": "Paid Leave",
+   "fieldtype": "Check",
+   "default": 0
+  },
+  {
+   "fieldname": "requires_approval",
+   "label": "Requires Approval",
+   "fieldtype": "Check",
+   "default": 1
+  },
+  {
+   "fieldname": "max_consecutive_days",
+   "label": "Max Consecutive Days",
+   "fieldtype": "Float",
+   "default": 0
+  },
+  {
+   "fieldname": "description",
+   "label": "Description",
+   "fieldtype": "Text"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "HR Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  }
+ ]
+}

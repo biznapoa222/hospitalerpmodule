@@ -1,0 +1,93 @@
+{
+ "doctype": "DocType",
+ "module_name": "HRM",
+ "name": "Onboarding Checklist Item",
+ "description": "Individual checklist items for employee onboarding process",
+ "fields": [
+  {
+   "fieldname": "parent",
+   "label": "Parent",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "parenttype",
+   "label": "Parent Type",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "item_name",
+   "label": "Item Name",
+   "fieldtype": "Data",
+   "req": 1
+  },
+  {
+   "fieldname": "item_description",
+   "label": "Item Description",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Select",
+   "options": "Pending\nIn Progress\nCompleted\nSkipped",
+   "default": "Pending"
+  },
+  {
+   "fieldname": "assigned_to",
+   "label": "Assigned To",
+   "fieldtype": "Link",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "assigned_by",
+   "label": "Assigned By",
+   "fieldtype": "Link",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "due_date",
+   "label": "Due Date",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "completion_date",
+   "label": "Completion Date",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "completion_notes",
+   "label": "Completion Notes",
+   "fieldtype": "Text"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "HR Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "HR Clerk",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Employee",
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "delete": 0
+  }
+ ]
+}

@@ -1,0 +1,157 @@
+{
+ "doctype": "DocType",
+ "module_name": "HRM",
+ "name": "Disaster Recovery Backup",
+ "description": "Disaster recovery backup system with automated backups and recovery procedures",
+ "fields": [
+  {
+   "fieldname": "backup_name",
+   "label": "Backup Name",
+   "fieldtype": "Data",
+   "req": 1
+  },
+  {
+   "fieldname": "backup_type",
+   "label": "Backup Type",
+   "fieldtype": "Select",
+   "options": "Full\nIncremental\nDifferential"
+  },
+  {
+   "fieldname": "backup_date",
+   "label": "Backup Date",
+   "fieldtype": "Date",
+   "req": 1,
+   "default": "today"
+  },
+  {
+   "fieldname": "backup_time",
+   "label": "Backup Time",
+   "fieldtype": "Time",
+   "req": 1
+  },
+  {
+   "fieldname": "backup_size",
+   "label": "Backup Size (MB)",
+   "fieldtype": "Float"
+  },
+  {
+   "fieldname": "backup_location",
+   "label": "Backup Location",
+   "fieldtype": "Select",
+   "options": "Local Storage\nCloud Storage\nNetwork Storage"
+  },
+  {
+   "fieldname": "storage_path",
+   "label": "Storage Path",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "retention_period",
+   "label": "Retention Period (Days)",
+   "fieldtype": "Int",
+   "default": 30
+  },
+  {
+   "fieldname": "encryption_enabled",
+   "label": "Encryption Enabled",
+   "fieldtype": "Check",
+   "default": 1
+  },
+  {
+   "fieldname": "compression_enabled",
+   "label": "Compression Enabled",
+   "fieldtype": "Check",
+   "default": 1
+  },
+  {
+   "fieldname": "backup_status",
+   "label": "Backup Status",
+   "fieldtype": "Select",
+   "options": "Pending\nIn Progress\nCompleted\nFailed",
+   "default": "Pending"
+  },
+  {
+   "fieldname": "verification_status",
+   "label": "Verification Status",
+   "fieldtype": "Select",
+   "options": "Not Verified\nVerified\nFailed"
+  },
+  {
+   "fieldname": "verification_date",
+   "label": "Verification Date",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "recovery_test_date",
+   "label": "Recovery Test Date",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "recovery_test_result",
+   "label": "Recovery Test Result",
+   "fieldtype": "Select",
+   "options": "Passed\nFailed\nNot Tested"
+  },
+  {
+   "fieldname": "backup_file",
+   "label": "Backup File",
+   "fieldtype": "Attach"
+  },
+  {
+   "fieldname": "backup_checksum",
+   "label": "Backup Checksum",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "backup_script",
+   "label": "Backup Script",
+   "fieldtype": "Code"
+  },
+  {
+   "fieldname": "restore_script",
+   "label": "Restore Script",
+   "fieldtype": "Code"
+  },
+  {
+   "fieldname": "backup_schedule",
+   "label": "Backup Schedule",
+   "fieldtype": "Select",
+   "options": "Daily\nWeekly\nMonthly\nCustom"
+  },
+  {
+   "fieldname": "next_backup_date",
+   "label": "Next Backup Date",
+   "fieldtype": "Date"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "IT Administrator",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "HR Manager",
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "delete": 0
+  },
+  {
+   "role": "HR Clerk",
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "delete": 0
+  }
+ ]
+}

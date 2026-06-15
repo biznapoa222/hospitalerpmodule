@@ -1,0 +1,112 @@
+{
+ "doctype": "DocType",
+ "module_name": "HRM",
+ "name": "Payroll",
+ "description": "Kenya payroll processing with PAYE, SHA, Housing Levy, and P9 form generation",
+ "fields": [
+  {
+   "fieldname": "payroll_period",
+   "label": "Payroll Period",
+   "fieldtype": "Link",
+   "options": "Payroll Period",
+   "req": 1
+  },
+  {
+   "fieldname": "employee",
+   "label": "Employee",
+   "fieldtype": "Link",
+   "options": "Employee",
+   "req": 1
+  },
+  {
+   "fieldname": "basic_salary",
+   "label": "Basic Salary",
+   "fieldtype": "Currency",
+   "req": 1
+  },
+  {
+   "fieldname": "allowances",
+   "label": "Allowances",
+   "fieldtype": "Float",
+   "default": 0
+  },
+  {
+   "fieldname": "deductions",
+   "label": "Deductions",
+   "fieldtype": "Float",
+   "default": 0
+  },
+  {
+   "fieldname": "gross_pay",
+   "label": "Gross Pay",
+   "fieldtype": "Currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "paye",
+   "label": "PAYE (Income Tax)",
+   "fieldtype": "Currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sha",
+   "label": "SHA (Social Health Insurance)",
+   "fieldtype": "Currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "housing_levy",
+   "label": "Housing Levy",
+   "fieldtype": "Currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "net_pay",
+   "label": "Net Pay",
+   "fieldtype": "Currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "p9_form_generated",
+   "label": "P9 Form Generated",
+   "fieldtype": "Check",
+   "default": 0
+  },
+  {
+   "fieldname": "p9_form_url",
+   "label": "P9 Form URL",
+   "fieldtype": "Data",
+   "read_only": 1
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Select",
+   "options": "Draft\nSubmitted\nProcessed\nPaid",
+   "default": "Draft"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "HR Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Payroll Clerk",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  }
+ ]
+}
