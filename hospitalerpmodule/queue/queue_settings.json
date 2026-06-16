@@ -1,0 +1,88 @@
+{
+ "doctype": "DocType",
+ "module": "Queue",
+ "name": "Queue Settings",
+ "is_single": 1,
+ "fields": [
+  {
+   "fieldname": "enable_queue_management",
+   "label": "Enable Queue Management",
+   "fieldtype": "Check",
+   "default": 1
+  },
+  {
+   "fieldname": "auto_generate_tokens",
+   "label": "Auto Generate Tokens",
+   "fieldtype": "Check",
+   "default": 1
+  },
+  {
+   "fieldname": "enable_sms_notifications",
+   "label": "Enable SMS Notifications",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "display_screen_refresh_interval",
+   "label": "Display Screen Refresh Interval",
+   "fieldtype": "Int",
+   "default": 5,
+   "help": "In seconds"
+  },
+  {
+   "fieldname": "max_patients_per_counter",
+   "label": "Max Patients Per Counter",
+   "fieldtype": "Int",
+   "default": 50
+  },
+  {
+   "fieldname": "estimated_wait_time_per_patient",
+   "label": "Estimated Wait Time Per Patient",
+   "fieldtype": "Int",
+   "default": 10,
+   "help": "In minutes"
+  },
+  {
+   "fieldname": "show_estimated_wait_time",
+   "label": "Show Estimated Wait Time",
+   "fieldtype": "Check",
+   "default": 1
+  },
+  {
+   "fieldname": "allow_online_queue_booking",
+   "label": "Allow Online Queue Booking",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "enable_priority_queue",
+   "label": "Enable Priority Queue",
+   "fieldtype": "Check",
+   "default": 1
+  },
+  {
+   "fieldname": "working_hours_start",
+   "label": "Working Hours Start",
+   "fieldtype": "Time",
+   "default": "08:00:00"
+  },
+  {
+   "fieldname": "working_hours_end",
+   "label": "Working Hours End",
+   "fieldtype": "Time",
+   "default": "20:00:00"
+  },
+  {
+   "fieldname": "notes",
+   "label": "Notes",
+   "fieldtype": "Text"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  }
+ ]
+}

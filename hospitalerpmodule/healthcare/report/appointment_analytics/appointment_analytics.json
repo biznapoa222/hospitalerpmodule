@@ -1,0 +1,15 @@
+{
+ "doctype": "Report",
+ "name": "Appointment Analytics",
+ "module": "Healthcare",
+ "report_name": "Appointment Analytics",
+ "report_type": "Script Report",
+ "ref_doctype": "Patient Appointment",
+ "is_standard": "Yes",
+ "roles": [
+  {"role": "System Manager"},
+  {"role": "Medical Administrator"},
+  {"role": "Doctor"},
+  {"role": "Receptionist"}
+ ]
+}

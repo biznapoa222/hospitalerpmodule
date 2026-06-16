@@ -1,0 +1,51 @@
+{
+ "doctype": "DocType",
+ "module": "Healthcare",
+ "name": "Therapy Plan Detail",
+ "is_child": 1,
+ "description": "Therapy plan detail items",
+ "fields": [
+  {
+   "fieldname": "therapy_type",
+   "label": "Therapy Type",
+   "fieldtype": "Link",
+   "options": "Therapy Type"
+  },
+  {
+   "fieldname": "therapy_name",
+   "label": "Therapy Name",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "sessions",
+   "label": "Sessions",
+   "fieldtype": "Int",
+   "default": 1
+  },
+  {
+   "fieldname": "frequency",
+   "label": "Frequency",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "duration",
+   "label": "Duration",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "start_date",
+   "label": "Start Date",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "target_date",
+   "label": "Target Date",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "notes",
+   "label": "Notes",
+   "fieldtype": "Text"
+  }
+ ]
+}

@@ -1,0 +1,56 @@
+{
+ "doctype": "DocType",
+ "module": "Healthcare",
+ "name": "Medical Code Standard",
+ "description": "Medical Code Standard master data",
+ "search_fields": "standard_name",
+ "title_field": "standard_name",
+ "track_changes": 1,
+  "fields": [
+   {
+    "fieldname": "standard_name",
+    "label": "Standard Name",
+    "fieldtype": "Data",
+    "req": 1,
+    "unique": 1,
+    "in_list_view": 1
+   },
+  {
+   "fieldname": "description",
+   "label": "Description",
+   "fieldtype": "Text"
+  },
+   {
+    "fieldname": "system",
+    "label": "System",
+    "fieldtype": "Select",
+    "options": "ICD-10\nICD-11\nSNOMED CT\nCPT\nLOINC\nOther",
+    "in_list_view": 1,
+    "in_standard_filter": 1
+   },
+   {
+    "fieldname": "is_active",
+    "label": "Is Active",
+    "fieldtype": "Check",
+    "default": 1,
+    "in_list_view": 1,
+    "in_standard_filter": 1
+   }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Medical Administrator",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  }
+ ]
+}

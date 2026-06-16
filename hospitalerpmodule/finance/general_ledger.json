@@ -1,0 +1,139 @@
+{
+ "doctype": "DocType",
+ "module": "FINANCE",
+ "name": "General Ledger",
+ "description": "Core accounting module for recording financial transactions and maintaining account balances",
+ "fields": [
+  {
+   "fieldname": "posting_date",
+   "label": "Posting Date",
+   "fieldtype": "Date",
+   "req": 1
+  },
+  {
+   "fieldname": "account",
+   "label": "Account",
+   "fieldtype": "Link",
+   "options": "Account",
+   "req": 1
+  },
+  {
+   "fieldname": "debit_account",
+   "label": "Debit Account",
+   "fieldtype": "Link",
+   "options": "Account",
+   "req": 1
+  },
+  {
+   "fieldname": "credit_account",
+   "label": "Credit Account",
+   "fieldtype": "Link",
+   "options": "Account",
+   "req": 1
+  },
+  {
+   "fieldname": "amount",
+   "label": "Amount",
+   "fieldtype": "Currency",
+   "req": 1
+  },
+  {
+   "fieldname": "reference_type",
+   "label": "Reference Type",
+   "fieldtype": "Select",
+   "options": "Journal Entry\nPayment\nInvoice\nReceipt\nOther"
+  },
+  {
+   "fieldname": "reference_name",
+   "label": "Reference Name",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "description",
+   "label": "Description",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "cheque_number",
+   "label": "Cheque Number",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "bank_account",
+   "label": "Bank Account",
+   "fieldtype": "Link",
+   "options": "Bank Account"
+  },
+  {
+   "fieldname": "department",
+   "label": "Department",
+   "fieldtype": "Link",
+   "options": "Department"
+  },
+  {
+   "fieldname": "project",
+   "label": "Project",
+   "fieldtype": "Link",
+   "options": "Project"
+  },
+  {
+   "fieldname": "cost_center",
+   "label": "Cost Center",
+   "fieldtype": "Link",
+   "options": "Cost Center"
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Select",
+   "options": "Draft\nPosted\nCancelled",
+   "default": "Draft"
+  },
+  {
+   "fieldname": "approved_by",
+   "label": "Approved By",
+   "fieldtype": "Link",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "approved_on",
+   "label": "Approved On",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "cancel_reason",
+   "label": "Cancel Reason",
+   "fieldtype": "Text"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Accountant",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Finance Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "HR Manager",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  }
+ ]
+}

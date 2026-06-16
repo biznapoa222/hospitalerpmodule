@@ -1,0 +1,39 @@
+{
+ "doctype": "DocType",
+ "module": "Healthcare",
+ "name": "Lab Test Result",
+ "is_child": 1,
+ "fields": [
+  {
+   "fieldname": "test_name",
+   "label": "Test Name",
+   "fieldtype": "Data",
+   "req": 1
+  },
+  {
+   "fieldname": "result_value",
+   "label": "Result Value",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "normal_range",
+   "label": "Normal Range",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "unit",
+   "label": "Unit",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "is_abnormal",
+   "label": "Is Abnormal",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "comments",
+   "label": "Comments",
+   "fieldtype": "Text"
+  }
+ ]
+}

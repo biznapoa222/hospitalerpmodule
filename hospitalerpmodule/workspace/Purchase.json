@@ -1,0 +1,83 @@
+{
+ "doctype": "Workspace",
+ "name": "Purchase",
+ "module": "Inventory",
+ "category": "Modules",
+ "icon": "purchase",
+ "label": "Purchase",
+ "description": "Procurement, purchase orders, and supplier management",
+ "sequence_id": 13,
+ "is_default": 0,
+ "charts": [],
+ "shortcuts": [
+   {
+     "label": "New Purchase Order",
+     "type": "DocType",
+     "link_to": "Purchase Order",
+     "doc_view": "New",
+     "icon": "add",
+     "color": "blue"
+   },
+   {
+     "label": "New Item",
+     "type": "DocType",
+     "link_to": "Item",
+     "doc_view": "New",
+     "icon": "add",
+     "color": "green"
+   }
+ ],
+ "cards": [],
+ "number_cards": [],
+ "links": [
+   {
+     "label": "Purchase Order",
+     "type": "DocType",
+     "link_to": "Purchase Order",
+     "link_type": "DocType",
+     "group": "Orders",
+     "onboard": 1
+   },
+   {
+     "label": "Item",
+     "type": "DocType",
+     "link_to": "Item",
+     "link_type": "DocType",
+     "group": "Inventory",
+     "onboard": 1
+   },
+   {
+     "label": "Warehouse",
+     "type": "DocType",
+     "link_to": "Warehouse",
+     "link_type": "DocType",
+     "group": "Inventory",
+     "onboard": 0
+   },
+   {
+     "label": "Stock Entry",
+     "type": "DocType",
+     "link_to": "Stock Entry",
+     "link_type": "DocType",
+     "group": "Inventory",
+     "onboard": 0
+   },
+   {
+     "label": "Purchase Analytics",
+     "type": "DocType",
+     "link_to": "Purchase Analytics",
+     "link_type": "Report",
+     "group": "Reports",
+     "onboard": 0
+   },
+   {
+     "label": "Stock Report",
+     "type": "DocType",
+     "link_to": "Stock Report",
+     "link_type": "Report",
+     "group": "Reports",
+     "onboard": 0
+   }
+ ],
+ "custom_blocks": []
+}

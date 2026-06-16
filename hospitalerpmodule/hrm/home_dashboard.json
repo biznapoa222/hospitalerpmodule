@@ -1,0 +1,148 @@
+{
+  "doctype": "DocType",
+  "module": "HRM",
+  "name": "Home Dashboard",
+  "description": "Professional dashboard for home healthcare management with key metrics, charts, and summary information",
+  "fields": [
+    {
+      "fieldname": "dashboard_name",
+      "label": "Dashboard Name",
+      "fieldtype": "Data",
+      "req": 1,
+      "unique": 1
+    },
+    {
+      "fieldname": "dashboard_code",
+      "label": "Dashboard Code",
+      "fieldtype": "Data",
+      "req": 1
+    },
+    {
+      "fieldname": "dashboard_type",
+      "label": "Dashboard Type",
+      "fieldtype": "Select",
+      "options": "Operational\nFinancial\nClinical\nAdministrative\nCustom\nHome Care"
+    },
+    {
+      "fieldname": "target_home",
+      "label": "Target Home",
+      "fieldtype": "Link",
+      "options": "Home"
+    },
+    {
+      "fieldname": "is_default",
+      "label": "Is Default",
+      "fieldtype": "Check",
+      "default": 0
+    },
+    {
+      "fieldname": "layout",
+      "label": "Layout",
+      "fieldtype": "Select",
+      "options": "Grid\nList\nCards\nMixed\nDashboard",
+      "default": "Dashboard"
+    },
+    {
+      "fieldname": "refresh_interval",
+      "label": "Refresh Interval (seconds)",
+      "fieldtype": "Int",
+      "default": 60
+    },
+    {
+      "fieldname": "color_scheme",
+      "label": "Color Scheme",
+      "fieldtype": "Select",
+      "options": "Blue\nGreen\nDark\nLight\nCustom",
+      "default": "Green"
+    },
+    {
+      "fieldname": "show_patient_metrics",
+      "label": "Show Patient Metrics",
+      "fieldtype": "Check",
+      "default": 1
+    },
+    {
+      "fieldname": "show_visit_metrics",
+      "label": "Show Visit Metrics",
+      "fieldtype": "Check",
+      "default": 1
+    },
+    {
+      "fieldname": "show_staff_metrics",
+      "label": "Show Staff Metrics",
+      "fieldtype": "Check",
+      "default": 1
+    },
+    {
+      "fieldname": "show_medication_metrics",
+      "label": "Show Medication Metrics",
+      "fieldtype": "Check",
+      "default": 1
+    },
+    {
+      "fieldname": "show_capacity_charts",
+      "label": "Show Capacity Charts",
+      "fieldtype": "Check",
+      "default": 1
+    },
+    {
+      "fieldname": "show_trend_charts",
+      "label": "Show Trend Charts",
+      "fieldtype": "Check",
+      "default": 1
+    },
+    {
+      "fieldname": "header_text",
+      "label": "Header Text",
+      "fieldtype": "Small Text"
+    },
+    {
+      "fieldname": "footer_text",
+      "label": "Footer Text",
+      "fieldtype": "Small Text"
+    },
+    {
+      "fieldname": "description",
+      "label": "Description",
+      "fieldtype": "Text",
+      "rows": 3
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "HR Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 0
+    },
+    {
+      "role": "HR Clerk",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 0
+    },
+    {
+      "role": "Nurse",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 0
+    },
+    {
+      "role": "Doctor",
+      "read": 1,
+      "write": 0,
+      "create": 0,
+      "delete": 0
+    }
+  ]
+}

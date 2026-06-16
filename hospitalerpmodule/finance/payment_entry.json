@@ -1,0 +1,148 @@
+{
+ "doctype": "DocType",
+ "module": "FINANCE",
+ "name": "Payment Entry",
+ "description": "Record and manage financial payments and receipts",
+ "fields": [
+  {
+   "fieldname": "posting_date",
+   "label": "Posting Date",
+   "fieldtype": "Date",
+   "req": 1
+  },
+  {
+   "fieldname": "payment_type",
+   "label": "Payment Type",
+   "fieldtype": "Select",
+   "options": "Pay\nReceive\nTransfer\nExpense\nIncome",
+   "req": 1
+  },
+  {
+   "fieldname": "party_type",
+   "label": "Party Type",
+   "fieldtype": "Select",
+   "options": "Supplier\nCustomer\nEmployee\nBank Account\nOther",
+   "req": 1
+  },
+  {
+   "fieldname": "party",
+   "label": "Party",
+   "fieldtype": "Dynamic Link",
+   "options": "party_type",
+   "req": 1
+  },
+  {
+   "fieldname": "amount",
+   "label": "Amount",
+   "fieldtype": "Currency",
+   "req": 1
+  },
+  {
+   "fieldname": "mode_of_payment",
+   "label": "Mode of Payment",
+   "fieldtype": "Select",
+   "options": "Bank Transfer\nCheque\nCash\nCredit Card\nDigital Wallet\nPayPal"
+  },
+  {
+   "fieldname": "bank_account",
+   "label": "Bank Account",
+   "fieldtype": "Link",
+   "options": "Bank Account"
+  },
+  {
+   "fieldname": "cheque_number",
+   "label": "Cheque Number",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "reference_no",
+   "label": "Reference No",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "reference_date",
+   "label": "Reference Date",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "description",
+   "label": "Description",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Select",
+   "options": "Draft\nSubmitted\nApproved\nCleared\nFailed\nCancelled",
+   "default": "Draft"
+  },
+  {
+   "fieldname": "approved_by",
+   "label": "Approved By",
+   "fieldtype": "Link",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "approved_on",
+   "label": "Approved On",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "cleared_by",
+   "label": "Cleared By",
+   "fieldtype": "Link",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "cleared_on",
+   "label": "Cleared On",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "remarks",
+   "label": "Remarks",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "department",
+   "label": "Department",
+   "fieldtype": "Link",
+   "options": "Department"
+  },
+  {
+   "fieldname": "project",
+   "label": "Project",
+   "fieldtype": "Link",
+   "options": "Project"
+  },
+  {
+   "fieldname": "cost_center",
+   "label": "Cost Center",
+   "fieldtype": "Link",
+   "options": "Cost Center"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Accountant",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Finance Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  }
+ ]
+}

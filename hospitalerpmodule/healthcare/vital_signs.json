@@ -1,0 +1,146 @@
+{
+ "doctype": "DocType",
+ "module": "Healthcare",
+ "name": "Vital Signs",
+ "is_child": 1,
+ "description": "Patient vital signs recording",
+ "fields": [
+  {
+   "fieldname": "patient",
+   "label": "Patient",
+   "fieldtype": "Link",
+   "options": "Patient",
+   "req": 1
+  },
+  {
+   "fieldname": "encounter",
+   "label": "Encounter",
+   "fieldtype": "Link",
+   "options": "Patient Encounter"
+  },
+  {
+   "fieldname": "date",
+   "label": "Date",
+   "fieldtype": "Date",
+   "default": "Today"
+  },
+  {
+   "fieldname": "time",
+   "label": "Time",
+   "fieldtype": "Time"
+  },
+  {
+   "fieldname": "body_temperature",
+   "label": "Body Temperature",
+   "fieldtype": "Float",
+   "help": "In Celsius"
+  },
+  {
+   "fieldname": "pulse_rate",
+   "label": "Pulse Rate",
+   "fieldtype": "Int",
+   "help": "Beats per minute"
+  },
+  {
+   "fieldname": "respiratory_rate",
+   "label": "Respiratory Rate",
+   "fieldtype": "Int",
+   "help": "Breaths per minute"
+  },
+  {
+   "fieldname": "blood_pressure_systolic",
+   "label": "Blood Pressure (Systolic)",
+   "fieldtype": "Int",
+   "help": "Systolic mmHg"
+  },
+  {
+   "fieldname": "blood_pressure_diastolic",
+   "label": "Blood Pressure (Diastolic)",
+   "fieldtype": "Int",
+   "help": "Diastolic mmHg"
+  },
+  {
+   "fieldname": "oxygen_saturation",
+   "label": "Oxygen Saturation",
+   "fieldtype": "Float",
+   "help": "SpO2 percentage"
+  },
+  {
+   "fieldname": "blood_glucose",
+   "label": "Blood Glucose",
+   "fieldtype": "Float",
+   "help": "mg/dL"
+  },
+  {
+   "fieldname": "height",
+   "label": "Height",
+   "fieldtype": "Float",
+   "help": "In cm"
+  },
+  {
+   "fieldname": "weight",
+   "label": "Weight",
+   "fieldtype": "Float",
+   "help": "In kg"
+  },
+  {
+   "fieldname": "bmi",
+   "label": "BMI",
+   "fieldtype": "Float",
+   "read_only": 1
+  },
+  {
+   "fieldname": "head_circumference",
+   "label": "Head Circumference",
+   "fieldtype": "Float",
+   "help": "In cm for pediatrics"
+  },
+  {
+   "fieldname": "pain_level",
+   "label": "Pain Level",
+   "fieldtype": "Int",
+   "help": "0-10 scale"
+  },
+  {
+   "fieldname": "notes",
+   "label": "Notes",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "recorded_by",
+   "label": "Recorded By",
+   "fieldtype": "Link",
+   "options": "Healthcare Practitioner"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Doctor",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Nurse",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Medical Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  }
+ ]
+}

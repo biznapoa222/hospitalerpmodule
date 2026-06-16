@@ -1,0 +1,14 @@
+{
+ "doctype": "Report",
+ "name": "Queue Analytics",
+ "module": "Healthcare",
+ "report_name": "Queue Analytics",
+ "report_type": "Script Report",
+ "ref_doctype": "Queue Ticket",
+ "is_standard": "Yes",
+ "roles": [
+  {"role": "System Manager"},
+  {"role": "Medical Administrator"},
+  {"role": "Receptionist"}
+ ]
+}

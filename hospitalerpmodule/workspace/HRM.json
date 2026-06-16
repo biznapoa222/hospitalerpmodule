@@ -1,0 +1,140 @@
+{
+ "doctype": "Workspace",
+ "name": "HRM",
+ "module": "HRM",
+ "category": "Modules",
+ "icon": "users",
+ "label": "Human Resources",
+ "description": "Manage employees, payroll, leave, and HR operations",
+ "charts": [],
+ "shortcuts": [],
+ "cards": [],
+ "links": [
+   {
+     "type": "DocType",
+     "label": "Employee",
+     "link_to": "Employee",
+     "link_type": "DocType",
+     "group": "Employee Management"
+   },
+   {
+     "type": "DocType",
+     "label": "Shift Type",
+     "link_to": "Shift Type",
+     "link_type": "DocType",
+     "group": "Time & Attendance"
+   },
+   {
+     "type": "DocType",
+     "label": "Shift Assignment",
+     "link_to": "Shift Assignment",
+     "link_type": "DocType",
+     "group": "Time & Attendance"
+   },
+   {
+     "type": "DocType",
+     "label": "Leave",
+     "link_to": "Leave",
+     "link_type": "DocType",
+     "group": "Time & Attendance"
+   },
+   {
+     "type": "DocType",
+     "label": "Leave Type",
+     "link_to": "Leave Type",
+     "link_type": "DocType",
+     "group": "Time & Attendance"
+   },
+   {
+     "type": "DocType",
+     "label": "Payroll",
+     "link_to": "Payroll",
+     "link_type": "DocType",
+     "group": "Payroll"
+   },
+   {
+     "type": "DocType",
+     "label": "P9 Form",
+     "link_to": "P9 Form",
+     "link_type": "DocType",
+     "group": "Payroll"
+   },
+   {
+     "type": "DocType",
+     "label": "Training",
+     "link_to": "Training",
+     "link_type": "DocType",
+     "group": "Training & Development"
+   },
+   {
+     "type": "DocType",
+     "label": "Training Certificate",
+     "link_to": "Training Certificate",
+     "link_type": "DocType",
+     "group": "Training & Development"
+   },
+   {
+     "type": "DocType",
+     "label": "LMS",
+     "link_to": "LMS",
+     "link_type": "DocType",
+     "group": "Training & Development"
+   },
+   {
+     "type": "DocType",
+     "label": "CME",
+     "link_to": "CME",
+     "link_type": "DocType",
+     "group": "Training & Development"
+   },
+   {
+     "type": "DocType",
+     "label": "Staff Onboarding",
+     "link_to": "Staff Onboarding",
+     "link_type": "DocType",
+     "group": "Onboarding & Compliance"
+   },
+   {
+     "type": "DocType",
+     "label": "Competency",
+     "link_to": "Competency",
+     "link_type": "DocType",
+     "group": "Onboarding & Compliance"
+   },
+   {
+     "type": "DocType",
+     "label": "Policy Acknowledgment",
+     "link_to": "Policy Acknowledgment",
+     "link_type": "DocType",
+     "group": "Onboarding & Compliance"
+   },
+   {
+     "type": "DocType",
+     "label": "Disaster Recovery Backup",
+     "link_to": "Disaster Recovery Backup",
+     "link_type": "DocType",
+     "group": "IT & Admin"
+   },
+   {
+     "type": "DocType",
+     "label": "Dashboard",
+     "link_to": "Dashboard",
+     "link_type": "DocType",
+     "group": "Dashboards"
+   },
+   {
+     "type": "DocType",
+     "label": "Home",
+     "link_to": "Home",
+     "link_type": "DocType",
+     "group": "Dashboards"
+   },
+   {
+     "type": "DocType",
+     "label": "Home Dashboard",
+     "link_to": "Home Dashboard",
+     "link_type": "DocType",
+     "group": "Dashboards"
+   }
+ ]
+}

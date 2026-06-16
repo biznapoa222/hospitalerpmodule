@@ -1,0 +1,83 @@
+{
+ "doctype": "Workspace",
+ "name": "Ward Management",
+ "module": "Healthcare",
+ "category": "Modules",
+ "icon": "ward",
+ "label": "Ward Management",
+ "description": "Inpatient management, bed allocation, and ward administration",
+ "sequence_id": 9,
+ "is_default": 0,
+ "charts": [],
+ "shortcuts": [
+   {
+     "label": "Admit Patient",
+     "type": "DocType",
+     "link_to": "Inpatient Record",
+     "doc_view": "New",
+     "icon": "add",
+     "color": "blue"
+   },
+   {
+     "label": "Discharge Patient",
+     "type": "DocType",
+     "link_to": "Inpatient Record",
+     "doc_view": "List",
+     "icon": "logout",
+     "color": "green"
+   }
+ ],
+ "cards": [],
+ "number_cards": [],
+ "links": [
+   {
+     "label": "Inpatient Record",
+     "type": "DocType",
+     "link_to": "Inpatient Record",
+     "link_type": "DocType",
+     "group": "Inpatient",
+     "onboard": 1
+   },
+   {
+     "label": "Healthcare Service Unit",
+     "type": "DocType",
+     "link_to": "Healthcare Service Unit",
+     "link_type": "DocType",
+     "group": "Facilities",
+     "onboard": 0
+   },
+   {
+     "label": "Healthcare Service Unit Type",
+     "type": "DocType",
+     "link_to": "Healthcare Service Unit Type",
+     "link_type": "DocType",
+     "group": "Facilities",
+     "onboard": 0
+   },
+   {
+     "label": "Bed Occupancy Report",
+     "type": "DocType",
+     "link_to": "Bed Occupancy Report",
+     "link_type": "Report",
+     "group": "Reports",
+     "onboard": 0
+   },
+   {
+     "label": "IPD Statistics",
+     "type": "DocType",
+     "link_to": "IPD Statistics",
+     "link_type": "Report",
+     "group": "Reports",
+     "onboard": 0
+   },
+   {
+     "label": "Discharge Summary",
+     "type": "DocType",
+     "link_to": "Discharge Summary",
+     "link_type": "Report",
+     "group": "Reports",
+     "onboard": 0
+   }
+ ],
+ "custom_blocks": []
+}

@@ -1,0 +1,91 @@
+{
+ "doctype": "Workspace",
+ "name": "Queue Management",
+ "module": "Healthcare",
+ "category": "Modules",
+ "icon": "queue",
+ "label": "Queue Management",
+ "description": "Patient queue tracking, token management, and digital display",
+ "sequence_id": 11,
+ "is_default": 0,
+ "charts": [],
+ "shortcuts": [
+   {
+     "label": "Issue Token",
+     "type": "DocType",
+     "link_to": "Queue Ticket",
+     "doc_view": "New",
+     "icon": "add",
+     "color": "blue"
+   },
+   {
+     "label": "Queue Display",
+     "type": "Page",
+     "link_to": "queue-display",
+     "doc_view": "",
+     "icon": "monitor",
+     "color": "green"
+   },
+   {
+     "label": "Manage Counters",
+     "type": "DocType",
+     "link_to": "Queue Counter",
+     "doc_view": "New",
+     "icon": "add",
+     "color": "orange"
+   }
+ ],
+ "cards": [],
+ "number_cards": [],
+ "links": [
+   {
+     "label": "Queue Ticket",
+     "type": "DocType",
+     "link_to": "Queue Ticket",
+     "link_type": "DocType",
+     "group": "Tickets",
+     "onboard": 1
+   },
+   {
+     "label": "Queue Service Type",
+     "type": "DocType",
+     "link_to": "Queue Service Type",
+     "link_type": "DocType",
+     "group": "Tickets",
+     "onboard": 0
+   },
+   {
+     "label": "Queue Counter",
+     "type": "DocType",
+     "link_to": "Queue Counter",
+     "link_type": "DocType",
+     "group": "Counters",
+     "onboard": 0
+   },
+   {
+     "label": "Queue Settings",
+     "type": "DocType",
+     "link_to": "Queue Settings",
+     "link_type": "DocType",
+     "group": "Settings",
+     "onboard": 0
+   },
+   {
+     "label": "Queue Analytics",
+     "type": "DocType",
+     "link_to": "Queue Analytics",
+     "link_type": "Report",
+     "group": "Reports",
+     "onboard": 0
+   },
+   {
+     "label": "Waiting Time Report",
+     "type": "DocType",
+     "link_to": "Waiting Time Report",
+     "link_type": "Report",
+     "group": "Reports",
+     "onboard": 0
+   }
+ ],
+ "custom_blocks": []
+}

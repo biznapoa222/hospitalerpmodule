@@ -1,0 +1,115 @@
+{
+ "doctype": "Workspace",
+ "name": "Medical Superintendent",
+ "module": "Healthcare",
+ "category": "Modules",
+ "icon": "doctor",
+ "label": "Medical Superintendent",
+ "description": "Hospital administration oversight and governance",
+ "sequence_id": 14,
+ "is_default": 0,
+ "charts": [],
+ "shortcuts": [
+   {
+     "label": "Dashboard",
+     "type": "Workspace",
+     "link_to": "HospitalDashboard",
+     "doc_view": "",
+     "icon": "dashboard",
+     "color": "blue"
+   },
+   {
+     "label": "Queue Overview",
+     "type": "Workspace",
+     "link_to": "QueueManagement",
+     "doc_view": "",
+     "icon": "queue",
+     "color": "green"
+   }
+ ],
+ "cards": [],
+ "number_cards": [],
+ "links": [
+   {
+     "label": "Dashboard",
+     "type": "Page",
+     "link_to": "dashboard",
+     "link_type": "Page",
+     "group": "Oversight",
+     "onboard": 0
+   },
+   {
+     "label": "Home",
+     "type": "Page",
+     "link_to": "home",
+     "link_type": "Page",
+     "group": "Oversight",
+     "onboard": 0
+   },
+   {
+     "label": "Hazard Notification",
+     "type": "DocType",
+     "link_to": "Hazard Notification",
+     "link_type": "DocType",
+     "group": "Oversight",
+     "onboard": 0
+   },
+   {
+     "label": "Medical Department",
+     "type": "DocType",
+     "link_to": "Medical Department",
+     "link_type": "DocType",
+     "group": "Departments",
+     "onboard": 0
+   },
+   {
+     "label": "Healthcare Practitioner",
+     "type": "DocType",
+     "link_to": "Healthcare Practitioner",
+     "link_type": "DocType",
+     "group": "Departments",
+     "onboard": 0
+   },
+   {
+     "label": "Policy Acknowledgment",
+     "type": "DocType",
+     "link_to": "Policy Acknowledgment",
+     "link_type": "DocType",
+     "group": "Compliance",
+     "onboard": 0
+   },
+   {
+     "label": "Disaster Recovery Backup",
+     "type": "DocType",
+     "link_to": "Disaster Recovery Backup",
+     "link_type": "DocType",
+     "group": "Compliance",
+     "onboard": 0
+   },
+   {
+     "label": "Hospital Statistics Report",
+     "type": "DocType",
+     "link_to": "Hospital Statistics Report",
+     "link_type": "Report",
+     "group": "Reports",
+     "onboard": 0
+   },
+   {
+     "label": "Compliance Report",
+     "type": "DocType",
+     "link_to": "Compliance Report",
+     "link_type": "Report",
+     "group": "Reports",
+     "onboard": 0
+   },
+   {
+     "label": "Department Performance",
+     "type": "DocType",
+     "link_to": "Department Performance",
+     "link_type": "Report",
+     "group": "Reports",
+     "onboard": 0
+   }
+ ],
+ "custom_blocks": []
+}

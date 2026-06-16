@@ -1,0 +1,42 @@
+{
+ "doctype": "DocType",
+ "module": "Healthcare",
+ "name": "Encounter Diagnosis",
+ "is_child": 1,
+ "description": "Diagnosis entries for patient encounters",
+ "fields": [
+  {
+   "fieldname": "diagnosis",
+   "label": "Diagnosis",
+   "fieldtype": "Link",
+   "options": "Diagnosis",
+   "req": 1
+  },
+  {
+   "fieldname": "diagnosis_description",
+   "label": "Diagnosis Description",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "diagnosis_type",
+   "label": "Diagnosis Type",
+   "fieldtype": "Select",
+   "options": "Primary\nSecondary\nComplication\nCo-morbidity"
+  },
+  {
+   "fieldname": "icd_code",
+   "label": "ICD Code",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "is_provisional",
+   "label": "Is Provisional",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "notes",
+   "label": "Notes",
+   "fieldtype": "Text"
+  }
+ ]
+}

@@ -1,0 +1,212 @@
+{
+ "doctype": "DocType",
+ "module": "Healthcare",
+ "name": "Patient Appointment",
+ "description": "Patient appointment scheduling with practitioner availability, queue integration, and billing",
+ "autoname": "field:appointment_code",
+ "title_field": "patient_name",
+ "search_fields": "patient_name, appointment_code, patient.patient_code",
+ "sort_field": "appointment_date",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "track_seen": 1,
+ "fields": [
+  {
+   "fieldname": "appointment_code",
+   "label": "Appointment Code",
+   "fieldtype": "Data",
+   "unique": 1,
+   "req": 1
+  },
+  {
+   "fieldname": "appointment_date",
+   "label": "Appointment Date",
+   "fieldtype": "Date",
+   "req": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "appointment_time",
+   "label": "Appointment Time",
+   "fieldtype": "Time",
+   "req": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "duration",
+   "label": "Duration (mins)",
+   "fieldtype": "Int",
+   "default": 15
+  },
+  {
+   "fieldname": "patient",
+   "label": "Patient",
+   "fieldtype": "Link",
+   "options": "Patient",
+   "req": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "patient_name",
+   "label": "Patient Name",
+   "fieldtype": "Data",
+   "read_only": 1,
+   "fetch_from": "patient.patient_name"
+  },
+  {
+   "fieldname": "patient_age",
+   "label": "Patient Age",
+   "fieldtype": "Data",
+   "read_only": 1,
+   "fetch_from": "patient.age"
+  },
+  {
+   "fieldname": "patient_gender",
+   "label": "Patient Gender",
+   "fieldtype": "Data",
+   "read_only": 1,
+   "fetch_from": "patient.gender"
+  },
+  {
+   "fieldname": "practitioner",
+   "label": "Practitioner",
+   "fieldtype": "Link",
+   "options": "Healthcare Practitioner",
+   "req": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "col1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "appointment_type",
+   "label": "Appointment Type",
+   "fieldtype": "Link",
+   "options": "Appointment Type"
+  },
+  {
+   "fieldname": "department",
+   "label": "Department",
+   "fieldtype": "Link",
+   "options": "Medical Department",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "service_unit",
+   "label": "Service Unit",
+   "fieldtype": "Link",
+   "options": "Healthcare Service Unit"
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Select",
+   "options": "Scheduled\nChecked In\nIn Consultation\nCompleted\nCancelled\nNo Show",
+   "default": "Scheduled",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "section_billing",
+   "fieldtype": "Section Break",
+   "label": "Billing Details"
+  },
+  {
+   "fieldname": "mode_of_payment",
+   "label": "Mode of Payment",
+   "fieldtype": "Select",
+   "options": "Cash\nCard\nInsurance\nBank Transfer\nOther"
+  },
+  {
+   "fieldname": "amount",
+   "label": "Amount",
+   "fieldtype": "Currency"
+  },
+  {
+   "fieldname": "col2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "invoice_generated",
+   "label": "Invoice Generated",
+   "fieldtype": "Check",
+   "read_only": 1
+  },
+  {
+   "fieldname": "is_emergency",
+   "label": "Emergency",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "section_details",
+   "fieldtype": "Section Break",
+   "label": "Appointment Details"
+  },
+  {
+   "fieldname": "reason",
+   "label": "Reason for Visit",
+   "fieldtype": "Small Text"
+  },
+  {
+   "fieldname": "symptoms",
+   "label": "Symptoms",
+   "fieldtype": "Small Text"
+  },
+  {
+   "fieldname": "is_follow_up",
+   "label": "Follow Up",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "previous_appointment",
+   "label": "Previous Appointment",
+   "fieldtype": "Link",
+   "options": "Patient Appointment"
+  },
+  {
+   "fieldname": "col3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "notes",
+   "label": "Notes",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "reminders_sent",
+   "label": "Reminders Sent",
+   "fieldtype": "Int",
+   "default": 0,
+   "read_only": 1
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1, "write": 1, "create": 1, "delete": 1, "email": 1, "report": 1, "print": 1
+  },
+  {
+   "role": "Doctor",
+   "read": 1, "write": 1, "create": 1, "delete": 0, "email": 1, "report": 1, "print": 1
+  },
+  {
+   "role": "Nurse",
+   "read": 1, "write": 1, "create": 1, "delete": 0, "email": 0, "report": 1, "print": 1
+  },
+  {
+   "role": "Medical Administrator",
+   "read": 1, "write": 1, "create": 1, "delete": 0, "email": 1, "report": 1, "print": 1
+  },
+  {
+   "role": "Receptionist",
+   "read": 1, "write": 1, "create": 1, "delete": 0
+  },
+  {
+   "role": "Patient",
+   "read": 1, "write": 0, "create": 0, "delete": 0
+  }
+ ]
+}

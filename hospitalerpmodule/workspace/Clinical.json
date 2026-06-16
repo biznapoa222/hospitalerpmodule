@@ -1,0 +1,123 @@
+{
+ "doctype": "Workspace",
+ "name": "Clinical",
+ "module": "Healthcare",
+ "category": "Modules",
+ "icon": "medical-cross",
+ "label": "Clinical",
+ "description": "Patient consultations, encounters, and clinical procedures",
+ "sequence_id": 3,
+ "is_default": 0,
+ "charts": [],
+ "shortcuts": [
+   {
+     "label": "New Encounter",
+     "type": "DocType",
+     "link_to": "Patient Encounter",
+     "doc_view": "New",
+     "icon": "add",
+     "color": "blue"
+   },
+   {
+     "label": "Record Vitals",
+     "type": "DocType",
+     "link_to": "Vital Signs",
+     "doc_view": "New",
+     "icon": "add",
+     "color": "green"
+   },
+   {
+     "label": "Clinical Procedure",
+     "type": "DocType",
+     "link_to": "Clinical Procedure",
+     "doc_view": "New",
+     "icon": "add",
+     "color": "red"
+   }
+ ],
+ "cards": [],
+ "number_cards": [],
+ "links": [
+   {
+     "label": "Patient Encounter",
+     "type": "DocType",
+     "link_to": "Patient Encounter",
+     "link_type": "DocType",
+     "group": "Consultation",
+     "onboard": 1
+   },
+   {
+     "label": "Vital Signs",
+     "type": "DocType",
+     "link_to": "Vital Signs",
+     "link_type": "DocType",
+     "group": "Consultation",
+     "onboard": 1
+   },
+   {
+     "label": "Clinical Procedure",
+     "type": "DocType",
+     "link_to": "Clinical Procedure",
+     "link_type": "DocType",
+     "group": "Consultation",
+     "onboard": 1
+   },
+   {
+     "label": "Healthcare Practitioner",
+     "type": "DocType",
+     "link_to": "Healthcare Practitioner",
+     "link_type": "DocType",
+     "group": "Masters",
+     "onboard": 1
+   },
+   {
+     "label": "Medical Department",
+     "type": "DocType",
+     "link_to": "Medical Department",
+     "link_type": "DocType",
+     "group": "Masters",
+     "onboard": 0
+   },
+   {
+     "label": "Diagnosis",
+     "type": "DocType",
+     "link_to": "Diagnosis",
+     "link_type": "DocType",
+     "group": "Masters",
+     "onboard": 0
+   },
+   {
+     "label": "Fee Validity",
+     "type": "DocType",
+     "link_to": "Fee Validity",
+     "link_type": "DocType",
+     "group": "Settings",
+     "onboard": 0
+   },
+   {
+     "label": "Clinical Procedure Template",
+     "type": "DocType",
+     "link_to": "Clinical Procedure Template",
+     "link_type": "DocType",
+     "group": "Settings",
+     "onboard": 0
+   },
+   {
+     "label": "Encounter Analytics",
+     "type": "DocType",
+     "link_to": "Encounter Analytics",
+     "link_type": "Report",
+     "group": "Reports",
+     "onboard": 0
+   },
+   {
+     "label": "Clinical Procedure Report",
+     "type": "DocType",
+     "link_to": "Clinical Procedure Report",
+     "link_type": "Report",
+     "group": "Reports",
+     "onboard": 0
+   }
+ ],
+ "custom_blocks": []
+}

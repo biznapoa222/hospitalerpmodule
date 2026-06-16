@@ -1,0 +1,109 @@
+{
+ "doctype": "DocType",
+ "module": "INVENTORY",
+ "name": "Purchase Order",
+ "description": "Manage purchase orders and supplier transactions",
+ "fields": [
+  {
+   "fieldname": "po_number",
+   "label": "PO Number",
+   "fieldtype": "Data",
+   "req": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "supplier",
+   "label": "Supplier",
+   "fieldtype": "Link",
+   "options": "Supplier",
+   "req": 1
+  },
+  {
+   "fieldname": "order_date",
+   "label": "Order Date",
+   "fieldtype": "Date",
+   "req": 1
+  },
+  {
+   "fieldname": "expected_delivery_date",
+   "label": "Expected Delivery Date",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Select",
+   "options": "Draft\nSubmitted\nApproved\nOrdered\nPartially Received\nCompleted\nCancelled",
+   "default": "Draft"
+  },
+  {
+   "fieldname": "approved_by",
+   "label": "Approved By",
+   "fieldtype": "Link",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "approved_on",
+   "label": "Approved On",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "items",
+   "label": "Items",
+   "fieldtype": "Table",
+   "options": "Purchase Order Item"
+  },
+  {
+   "fieldname": "payment_terms",
+   "label": "Payment Terms",
+   "fieldtype": "Data",
+   "description": "e.g., Net 30, Net 60, Due on Receipt"
+  },
+  {
+   "fieldname": "delivery_address",
+   "label": "Delivery Address",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "remarks",
+   "label": "Remarks",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "department",
+   "label": "Department",
+   "fieldtype": "Link",
+   "options": "Department"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Inventory Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Purchase Clerk",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Supplier",
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "delete": 0
+  }
+ ]
+}

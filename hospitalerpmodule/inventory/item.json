@@ -1,0 +1,169 @@
+{
+ "doctype": "DocType",
+ "module": "INVENTORY",
+ "name": "Item",
+ "description": "Master data for items and products in inventory",
+ "fields": [
+  {
+   "fieldname": "item_name",
+   "label": "Item Name",
+   "fieldtype": "Data",
+   "req": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "item_code",
+   "label": "Item Code",
+   "fieldtype": "Data",
+   "req": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "item_type",
+   "label": "Item Type",
+   "fieldtype": "Select",
+   "options": "Product\nService\nRaw Material\nFinished Good\nConsumable"
+  },
+  {
+   "fieldname": "description",
+   "label": "Description",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "unit_of_measure",
+   "label": "Unit of Measure",
+   "fieldtype": "Data",
+   "req": 1
+  },
+  {
+   "fieldname": "purchase_unit_price",
+   "label": "Purchase Unit Price",
+   "fieldtype": "Currency",
+   "default": 0
+  },
+  {
+   "fieldname": "selling_unit_price",
+   "label": "Selling Unit Price",
+   "fieldtype": "Currency",
+   "default": 0
+  },
+  {
+   "fieldname": "reorder_level",
+   "label": "Reorder Level",
+   "fieldtype": "Int",
+   "default": 0
+  },
+  {
+   "fieldname": "maximum_level",
+   "label": "Maximum Level",
+   "fieldtype": "Int",
+   "default": 0
+  },
+  {
+   "fieldname": "current_stock",
+   "label": "Current Stock",
+   "fieldtype": "Float",
+   "read_only": 1,
+   "default": 0
+  },
+  {
+   "fieldname": "safety_stock",
+   "label": "Safety Stock",
+   "fieldtype": "Float",
+   "default": 0
+  },
+  {
+   "fieldname": "warehouse",
+   "label": "Warehouse",
+   "fieldtype": "Link",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "supplier",
+   "label": "Supplier",
+   "fieldtype": "Link",
+   "options": "Supplier"
+  },
+  {
+   "fieldname": "category",
+   "label": "Category",
+   "fieldtype": "Link",
+   "options": "Item Category"
+  },
+  {
+   "fieldname": "brand",
+   "label": "Brand",
+   "fieldname": "brand",
+   "label": "Brand",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "model",
+   "label": "Model",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "serial_number",
+   "label": "Serial Number",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "batch_number",
+   "label": "Batch Number",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "expiry_date",
+   "label": "Expiry Date",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "is_active",
+   "label": "Is Active",
+   "fieldtype": "Check",
+   "default": 1
+  },
+  {
+   "fieldname": "created_by",
+   "label": "Created By",
+   "fieldtype": "Link",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "created_on",
+   "label": "Created On",
+   "fieldtype": "Date",
+   "default": "today"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Inventory Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Warehouse Staff",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Purchase Clerk",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  }
+ ]
+}

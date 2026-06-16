@@ -1,0 +1,163 @@
+{
+ "doctype": "DocType",
+ "module": "Healthcare",
+  "name": "Therapy Session",
+  "search_fields": "session_code, patient_name",
+  "title_field": "session_code",
+  "track_changes": 1,
+  "fields": [
+   {
+    "fieldname": "session_code",
+    "label": "Session Code",
+    "fieldtype": "Data",
+    "unique": 1,
+    "in_list_view": 1
+   },
+   {
+    "fieldname": "patient",
+    "label": "Patient",
+    "fieldtype": "Link",
+    "options": "Patient",
+    "req": 1,
+    "in_list_view": 1
+   },
+  {
+   "fieldname": "patient_name",
+   "label": "Patient Name",
+   "fieldtype": "Data",
+   "read_only": 1,
+   "fetch_from": "patient.patient_name"
+  },
+  {
+   "fieldname": "therapy_plan",
+   "label": "Therapy Plan",
+   "fieldtype": "Link",
+   "options": "Therapy Plan"
+  },
+  {
+   "fieldname": "therapy_type",
+   "label": "Therapy Type",
+   "fieldtype": "Link",
+   "options": "Therapy Type"
+  },
+   {
+    "fieldname": "practitioner",
+    "label": "Practitioner",
+    "fieldtype": "Link",
+    "options": "Healthcare Practitioner",
+    "req": 1,
+    "in_list_view": 1
+   },
+   {
+    "fieldname": "department",
+    "label": "Department",
+    "fieldtype": "Link",
+    "options": "Medical Department",
+    "in_standard_filter": 1
+   },
+  {
+   "fieldname": "encounter",
+   "label": "Encounter",
+   "fieldtype": "Link",
+   "options": "Patient Encounter"
+  },
+   {
+    "fieldname": "date",
+    "label": "Date",
+    "fieldtype": "Date",
+    "default": "Today",
+    "in_list_view": 1,
+    "in_standard_filter": 1
+   },
+  {
+   "fieldname": "start_time",
+   "label": "Start Time",
+   "fieldtype": "Time"
+  },
+  {
+   "fieldname": "end_time",
+   "label": "End Time",
+   "fieldtype": "Time"
+  },
+  {
+   "fieldname": "duration",
+   "label": "Duration",
+   "fieldtype": "Int",
+   "help": "In minutes"
+  },
+   {
+    "fieldname": "status",
+    "label": "Status",
+    "fieldtype": "Select",
+    "options": "Scheduled\nIn Progress\nCompleted\nCancelled\nMissed",
+    "default": "Scheduled",
+    "in_list_view": 1,
+    "in_standard_filter": 1
+   },
+  {
+   "fieldname": "exercises_performed",
+   "label": "Exercises Performed",
+   "fieldtype": "Text"
+  },
+   {
+    "fieldname": "billing_status",
+    "label": "Billing Status",
+    "fieldtype": "Select",
+    "options": "Pending\nBilled",
+    "default": "Pending",
+    "in_standard_filter": 1
+   },
+  {
+   "fieldname": "notes",
+   "label": "Notes",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "is_billable",
+   "label": "Is Billable",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "amount",
+   "label": "Amount",
+   "fieldtype": "Currency"
+  },
+  {
+   "fieldname": "billing_status",
+   "label": "Billing Status",
+   "fieldtype": "Select",
+   "options": "Pending\nBilled",
+   "default": "Pending"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Physiotherapist",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Doctor",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  },
+  {
+   "role": "Medical Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  }
+ ]
+}

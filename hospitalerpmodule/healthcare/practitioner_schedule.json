@@ -1,0 +1,145 @@
+{
+ "doctype": "DocType",
+ "module": "Healthcare",
+ "name": "Practitioner Schedule",
+ "description": "Practitioner Schedule master data",
+ "search_fields": "practitioner, schedule_name",
+ "title_field": "schedule_name",
+ "track_changes": 1,
+  "fields": [
+   {
+    "fieldname": "practitioner",
+    "label": "Practitioner",
+    "fieldtype": "Link",
+    "options": "Healthcare Practitioner",
+    "req": 1,
+    "in_list_view": 1,
+    "in_standard_filter": 1
+   },
+   {
+    "fieldname": "schedule_name",
+    "label": "Schedule Name",
+    "fieldtype": "Data",
+    "unique": 1,
+    "in_list_view": 1
+   },
+  {
+   "fieldname": "monday_start",
+   "label": "Monday Start",
+   "fieldtype": "Time"
+  },
+  {
+   "fieldname": "monday_end",
+   "label": "Monday End",
+   "fieldtype": "Time"
+  },
+  {
+   "fieldname": "tuesday_start",
+   "label": "Tuesday Start",
+   "fieldtype": "Time"
+  },
+  {
+   "fieldname": "tuesday_end",
+   "label": "Tuesday End",
+   "fieldtype": "Time"
+  },
+  {
+   "fieldname": "wednesday_start",
+   "label": "Wednesday Start",
+   "fieldtype": "Time"
+  },
+  {
+   "fieldname": "wednesday_end",
+   "label": "Wednesday End",
+   "fieldtype": "Time"
+  },
+  {
+   "fieldname": "thursday_start",
+   "label": "Thursday Start",
+   "fieldtype": "Time"
+  },
+  {
+   "fieldname": "thursday_end",
+   "label": "Thursday End",
+   "fieldtype": "Time"
+  },
+  {
+   "fieldname": "friday_start",
+   "label": "Friday Start",
+   "fieldtype": "Time"
+  },
+  {
+   "fieldname": "friday_end",
+   "label": "Friday End",
+   "fieldtype": "Time"
+  },
+  {
+   "fieldname": "saturday_start",
+   "label": "Saturday Start",
+   "fieldtype": "Time"
+  },
+  {
+   "fieldname": "saturday_end",
+   "label": "Saturday End",
+   "fieldtype": "Time"
+  },
+  {
+   "fieldname": "sunday_start",
+   "label": "Sunday Start",
+   "fieldtype": "Time"
+  },
+  {
+   "fieldname": "sunday_end",
+   "label": "Sunday End",
+   "fieldtype": "Time"
+  },
+  {
+   "fieldname": "start_date",
+   "label": "Start Date",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "end_date",
+   "label": "End Date",
+   "fieldtype": "Date"
+  },
+   {
+    "fieldname": "is_active",
+    "label": "Is Active",
+    "fieldtype": "Check",
+    "default": 1,
+    "in_list_view": 1,
+    "in_standard_filter": 1
+   },
+  {
+   "fieldname": "average_consultation_time",
+   "label": "Average Consultation Time",
+   "fieldtype": "Int",
+   "default": 15,
+   "description": "In minutes"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Doctor",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Medical Administrator",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  }
+ ]
+}

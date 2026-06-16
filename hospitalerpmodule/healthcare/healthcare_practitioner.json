@@ -1,0 +1,166 @@
+{
+ "doctype": "DocType",
+ "module": "Healthcare",
+ "name": "Healthcare Practitioner",
+ "description": "Healthcare Practitioner master data",
+ "search_fields": "practitioner_name, practitioner_code",
+ "title_field": "practitioner_name",
+ "track_changes": 1,
+  "fields": [
+   {
+    "fieldname": "practitioner_name",
+    "label": "Practitioner Name",
+    "fieldtype": "Data",
+    "req": 1,
+    "in_list_view": 1
+   },
+  {
+   "fieldname": "practitioner_code",
+   "label": "Practitioner Code",
+   "fieldtype": "Data",
+   "unique": 1
+  },
+  {
+   "fieldname": "employee",
+   "label": "Employee",
+   "fieldtype": "Link",
+   "options": "Employee"
+  },
+   {
+    "fieldname": "practitioner_type",
+    "label": "Practitioner Type",
+    "fieldtype": "Select",
+    "options": "Doctor\nNurse\nLab Technician\nRadiologist\nPhysiotherapist\nPharmacist\nAdministrator\nOther",
+    "in_list_view": 1,
+    "in_standard_filter": 1
+   },
+  {
+   "fieldname": "specialization",
+   "label": "Specialization",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "qualification",
+   "label": "Qualification",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "years_of_experience",
+   "label": "Years of Experience",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "medical_license_number",
+   "label": "Medical License Number",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "license_expiry_date",
+   "label": "License Expiry Date",
+   "fieldtype": "Date"
+  },
+   {
+    "fieldname": "department",
+    "label": "Department",
+    "fieldtype": "Link",
+    "options": "Medical Department",
+    "in_list_view": 1,
+    "in_standard_filter": 1
+   },
+   {
+    "fieldname": "mobile_phone",
+    "label": "Mobile Phone",
+    "fieldtype": "Data",
+    "req": 1,
+    "in_list_view": 1
+   },
+  {
+   "fieldname": "email",
+   "label": "Email",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "consultation_fee",
+   "label": "Consultation Fee",
+   "fieldtype": "Currency"
+  },
+  {
+   "fieldname": "follow_up_fee",
+   "label": "Follow Up Fee",
+   "fieldtype": "Currency"
+  },
+  {
+   "fieldname": "visit_hours_from",
+   "label": "Visit Hours From",
+   "fieldtype": "Time"
+  },
+  {
+   "fieldname": "visit_hours_to",
+   "label": "Visit Hours To",
+   "fieldtype": "Time"
+  },
+  {
+   "fieldname": "available_days",
+   "label": "Available Days",
+   "fieldtype": "Small Text",
+   "description": "Comma separated days"
+  },
+  {
+   "fieldname": "max_appointments_per_day",
+   "label": "Max Appointments Per Day",
+   "fieldtype": "Int",
+   "default": 20
+  },
+  {
+   "fieldname": "is_available",
+   "label": "Is Available",
+   "fieldtype": "Check",
+   "default": 1
+  },
+  {
+   "fieldname": "profile_image",
+   "label": "Profile Image",
+   "fieldtype": "Attach Image"
+  },
+  {
+   "fieldname": "signature",
+   "label": "Signature",
+   "fieldtype": "Attach"
+  },
+  {
+   "fieldname": "notes",
+   "label": "Notes",
+   "fieldtype": "Text"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Doctor",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Nurse",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  },
+  {
+   "role": "Medical Administrator",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  }
+ ]
+}

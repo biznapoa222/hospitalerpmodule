@@ -1,0 +1,172 @@
+{
+ "doctype": "DocType",
+ "module": "Queue",
+ "name": "Queue Ticket",
+ "description": "Patient queue ticket with token management, priority handling, and wait time tracking",
+ "autoname": "field:ticket_number",
+ "title_field": "ticket_number",
+ "search_fields": "ticket_number, patient_name, patient.patient_code",
+ "sort_field": "creation",
+ "sort_order": "ASC",
+ "track_changes": 1,
+ "track_seen": 1,
+ "fields": [
+  {
+   "fieldname": "ticket_number",
+   "label": "Ticket Number",
+   "fieldtype": "Data",
+   "req": 1,
+   "unique": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "queue_service_type",
+   "label": "Service Type",
+   "fieldtype": "Link",
+   "options": "Queue Service Type",
+   "req": 1
+  },
+  {
+   "fieldname": "patient",
+   "label": "Patient",
+   "fieldtype": "Link",
+   "options": "Patient",
+   "req": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "patient_name",
+   "label": "Patient Name",
+   "fieldtype": "Data",
+   "fetch_from": "patient.patient_name",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "patient_mobile",
+   "label": "Mobile",
+   "fieldtype": "Data",
+   "fetch_from": "patient.phone"
+  },
+  {
+   "fieldname": "appointment",
+   "label": "Appointment",
+   "fieldtype": "Link",
+   "options": "Patient Appointment"
+  },
+  {
+   "fieldname": "practitioner",
+   "label": "Practitioner",
+   "fieldtype": "Link",
+   "options": "Healthcare Practitioner",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "department",
+   "label": "Department",
+   "fieldtype": "Link",
+   "options": "Medical Department",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "counter",
+   "label": "Counter",
+   "fieldtype": "Link",
+   "options": "Queue Counter"
+  },
+  {
+   "fieldname": "priority",
+   "label": "Priority",
+   "fieldtype": "Select",
+   "options": "Normal\nUrgent\nEmergency",
+   "default": "Normal",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Select",
+   "options": "Waiting\nCalled\nIn Consultation\nCompleted\nSkipped\nNo Show\nCancelled",
+   "default": "Waiting",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "token_issued_time",
+   "label": "Issued Time",
+   "fieldtype": "Time",
+   "req": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "token_issued_date",
+   "label": "Issued Date",
+   "fieldtype": "Date",
+   "default": "Today",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "col_timing",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "called_time",
+   "label": "Called Time",
+   "fieldtype": "Time"
+  },
+  {
+   "fieldname": "consultation_start_time",
+   "label": "Consultation Start",
+   "fieldtype": "Time"
+  },
+  {
+   "fieldname": "consultation_end_time",
+   "label": "Consultation End",
+   "fieldtype": "Time"
+  },
+  {
+   "fieldname": "section_stats",
+   "fieldtype": "Section Break",
+   "label": "Time Statistics"
+  },
+  {
+   "fieldname": "waiting_time_minutes",
+   "label": "Wait Time (min)",
+   "fieldtype": "Int",
+   "read_only": 1
+  },
+  {
+   "fieldname": "service_time_minutes",
+   "label": "Service Time (min)",
+   "fieldtype": "Int",
+   "read_only": 1
+  },
+  {
+   "fieldname": "notes",
+   "label": "Notes",
+   "fieldtype": "Text"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1, "write": 1, "create": 1, "delete": 1, "email": 1, "report": 1
+  },
+  {
+   "role": "Medical Administrator",
+   "read": 1, "write": 1, "create": 1, "delete": 0, "report": 1
+  },
+  {
+   "role": "Receptionist",
+   "read": 1, "write": 1, "create": 1, "delete": 0, "report": 0
+  },
+  {
+   "role": "Nurse",
+   "read": 1, "write": 1, "create": 1, "delete": 0
+  },
+  {
+   "role": "Doctor",
+   "read": 1, "write": 1, "create": 0, "delete": 0
+  }
+ ]
+}

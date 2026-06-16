@@ -1,0 +1,96 @@
+{
+ "doctype": "DocType",
+ "module": "Healthcare",
+  "name": "Exercise Type",
+  "search_fields": "exercise_name, exercise_code",
+  "title_field": "exercise_name",
+  "track_changes": 1,
+  "fields": [
+   {
+    "fieldname": "exercise_name",
+    "label": "Exercise Name",
+    "fieldtype": "Data",
+    "req": 1,
+    "unique": 1,
+    "in_list_view": 1
+   },
+  {
+   "fieldname": "exercise_code",
+   "label": "Exercise Code",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "description",
+   "label": "Description",
+   "fieldtype": "Text"
+  },
+   {
+    "fieldname": "difficulty_level",
+    "label": "Difficulty Level",
+    "fieldtype": "Select",
+    "options": "Beginner\nIntermediate\nAdvanced",
+    "in_list_view": 1,
+    "in_standard_filter": 1
+   },
+   {
+    "fieldname": "target_body_part",
+    "label": "Target Body Part",
+    "fieldtype": "Data",
+    "in_list_view": 1
+   },
+  {
+   "fieldname": "equipment_required",
+   "label": "Equipment Required",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "sets",
+   "label": "Sets",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "repetitions",
+   "label": "Repetitions",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "duration",
+   "label": "Duration",
+   "fieldtype": "Int",
+   "help": "In minutes"
+  },
+  {
+   "fieldname": "precautions",
+   "label": "Precautions",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "benefits",
+   "label": "Benefits",
+   "fieldtype": "Text"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Physiotherapist",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Medical Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  }
+ ]
+}

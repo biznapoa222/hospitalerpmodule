@@ -1,0 +1,133 @@
+{
+ "doctype": "DocType",
+ "module": "FINANCE",
+ "name": "Cost Accounting",
+ "description": "Track and analyze costs for products, services, and operations",
+ "fields": [
+  {
+   "fieldname": "cost_name",
+   "label": "Cost Name",
+   "fieldtype": "Data",
+   "req": 1
+  },
+  {
+   "fieldname": "cost_type",
+   "label": "Cost Type",
+   "fieldtype": "Select",
+   "options": "Direct Material\nDirect Labor\nOverhead\nFixed Cost\nVariable Cost\nOperating Cost",
+   "req": 1
+  },
+  {
+   "fieldname": "cost_category",
+   "label": "Cost Category",
+   "fieldtype": "Select",
+   "options": "Production\nAdministrative\nSelling\nResearch & Development\nDepreciation"
+  },
+  {
+   "fieldname": "department",
+   "label": "Department",
+   "fieldtype": "Link",
+   "options": "Department"
+  },
+  {
+   "fieldname": "project",
+   "label": "Project",
+   "fieldtype": "Link",
+   "options": "Project"
+  },
+  {
+   "fieldname": "account",
+   "label": "Account",
+   "fieldtype": "Link",
+   "options": "Account"
+  },
+  {
+   "fieldname": "cost_amount",
+   "label": "Cost Amount",
+   "fieldtype": "Currency",
+   "req": 1
+  },
+  {
+   "fieldname": "quantity",
+   "label": "Quantity",
+   "fieldtype": "Float",
+   "default": 1
+  },
+  {
+   "fieldname": "unit_cost",
+   "label": "Unit Cost",
+   "fieldtype": "Currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cost_date",
+   "label": "Cost Date",
+   "fieldtype": "Date",
+   "req": 1
+  },
+  {
+   "fieldname": "cost_center",
+   "label": "Cost Center",
+   "fieldtype": "Link",
+   "options": "Cost Center"
+  },
+  {
+   "fieldname": "approval_status",
+   "label": "Approval Status",
+   "fieldtype": "Select",
+   "options": "Draft\nSubmitted\nApproved\nRejected",
+   "default": "Draft"
+  },
+  {
+   "fieldname": "approved_by",
+   "label": "Approved By",
+   "fieldtype": "Link",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "approved_on",
+   "label": "Approved On",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "description",
+   "label": "Description",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "remarks",
+   "label": "Remarks",
+   "fieldtype": "Text"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Accountant",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Finance Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Department Head",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  }
+ ]
+}

@@ -1,6 +1,6 @@
 {
  "doctype": "DocType",
- "module_name": "HRM",
+ "module": "HRM",
  "name": "Training",
  "description": "Training and development program management",
  "fields": [

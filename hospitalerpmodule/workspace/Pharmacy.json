@@ -1,0 +1,99 @@
+{
+ "doctype": "Workspace",
+ "name": "Pharmacy",
+ "module": "Healthcare",
+ "category": "Modules",
+ "icon": "pharmacy",
+ "label": "Pharmacy",
+ "description": "Drug dispensing, pharmacy inventory, and prescription fulfillment",
+ "sequence_id": 5,
+ "is_default": 0,
+ "charts": [],
+ "shortcuts": [
+   {
+     "label": "Dispense Drugs",
+     "type": "DocType",
+     "link_to": "Sales Invoice",
+     "doc_view": "New",
+     "icon": "add",
+     "color": "blue"
+   },
+   {
+     "label": "New Drug",
+     "type": "DocType",
+     "link_to": "Item",
+     "doc_view": "New",
+     "icon": "add",
+     "color": "green"
+   },
+   {
+     "label": "Stock Entry",
+     "type": "DocType",
+     "link_to": "Stock Entry",
+     "doc_view": "New",
+     "icon": "add",
+     "color": "orange"
+   }
+ ],
+ "cards": [],
+ "number_cards": [],
+ "links": [
+   {
+     "label": "Sales Invoice",
+     "type": "DocType",
+     "link_to": "Sales Invoice",
+     "link_type": "DocType",
+     "group": "Dispensing",
+     "onboard": 1
+   },
+   {
+     "label": "Drug Prescription",
+     "type": "DocType",
+     "link_to": "Drug Prescription",
+     "link_type": "DocType",
+     "group": "Dispensing",
+     "onboard": 1
+   },
+   {
+     "label": "Item",
+     "type": "DocType",
+     "link_to": "Item",
+     "link_type": "DocType",
+     "group": "Inventory",
+     "onboard": 1
+   },
+   {
+     "label": "Stock Entry",
+     "type": "DocType",
+     "link_to": "Stock Entry",
+     "link_type": "DocType",
+     "group": "Inventory",
+     "onboard": 0
+   },
+   {
+     "label": "Pharmacy Stock Report",
+     "type": "DocType",
+     "link_to": "Pharmacy Stock Report",
+     "link_type": "Report",
+     "group": "Reports",
+     "onboard": 0
+   },
+   {
+     "label": "Drug Expiry Report",
+     "type": "DocType",
+     "link_to": "Drug Expiry Report",
+     "link_type": "Report",
+     "group": "Reports",
+     "onboard": 0
+   },
+   {
+     "label": "Prescription Analytics",
+     "type": "DocType",
+     "link_to": "Prescription Analytics",
+     "link_type": "Report",
+     "group": "Reports",
+     "onboard": 0
+   }
+ ],
+ "custom_blocks": []
+}

@@ -1,0 +1,83 @@
+{
+ "doctype": "Workspace",
+ "name": "Laboratory",
+ "module": "Healthcare",
+ "category": "Modules",
+ "icon": "lab",
+ "label": "Laboratory",
+ "description": "Lab test management, sample collection, and results reporting",
+ "sequence_id": 4,
+ "is_default": 0,
+ "charts": [],
+ "shortcuts": [
+   {
+     "label": "New Lab Test",
+     "type": "DocType",
+     "link_to": "Lab Test",
+     "doc_view": "New",
+     "icon": "add",
+     "color": "blue"
+   },
+   {
+     "label": "Collect Sample",
+     "type": "DocType",
+     "link_to": "Sample Collection",
+     "doc_view": "New",
+     "icon": "add",
+     "color": "green"
+   },
+   {
+     "label": "New Template",
+     "type": "DocType",
+     "link_to": "Lab Test Template",
+     "doc_view": "New",
+     "icon": "add",
+     "color": "orange"
+   }
+ ],
+ "cards": [],
+ "number_cards": [],
+ "links": [
+   {
+     "label": "Lab Test",
+     "type": "DocType",
+     "link_to": "Lab Test",
+     "link_type": "DocType",
+     "group": "Tests",
+     "onboard": 1
+   },
+   {
+     "label": "Lab Test Template",
+     "type": "DocType",
+     "link_to": "Lab Test Template",
+     "link_type": "DocType",
+     "group": "Tests",
+     "onboard": 1
+   },
+   {
+     "label": "Sample Collection",
+     "type": "DocType",
+     "link_to": "Sample Collection",
+     "link_type": "DocType",
+     "group": "Samples",
+     "onboard": 0
+   },
+   {
+     "label": "Lab Test Report",
+     "type": "DocType",
+     "link_to": "Lab Test Report",
+     "link_type": "Report",
+     "group": "Reports",
+     "onboard": 0
+   },
+   {
+     "label": "Test Analytics",
+     "type": "DocType",
+     "link_to": "Test Analytics",
+     "link_type": "Report",
+     "group": "Reports",
+     "onboard": 0
+   }
+ ],
+ "custom_blocks": []
+}

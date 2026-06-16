@@ -1,0 +1,70 @@
+{
+ "doctype": "Workspace",
+ "name": "Finance",
+ "module": "Finance",
+ "category": "Modules",
+ "icon": "chart-line",
+ "label": "Finance",
+ "description": "Manage accounts, payments, budgets and financial reporting",
+ "charts": [],
+ "shortcuts": [],
+ "cards": [],
+ "links": [
+   {
+     "type": "DocType",
+     "label": "Account",
+     "link_to": "Account",
+     "link_type": "DocType",
+     "group": "Accounting"
+   },
+   {
+     "type": "DocType",
+     "label": "General Ledger",
+     "link_to": "General Ledger",
+     "link_type": "DocType",
+     "group": "Accounting"
+   },
+   {
+     "type": "DocType",
+     "label": "Accounts Payable",
+     "link_to": "Accounts Payable",
+     "link_type": "DocType",
+     "group": "Accounts Payable & Receivable"
+   },
+   {
+     "type": "DocType",
+     "label": "Accounts Receivable",
+     "link_to": "Accounts Receivable",
+     "link_type": "DocType",
+     "group": "Accounts Payable & Receivable"
+   },
+   {
+     "type": "DocType",
+     "label": "Payment Entry",
+     "link_to": "Payment Entry",
+     "link_type": "DocType",
+     "group": "Payments"
+   },
+   {
+     "type": "DocType",
+     "label": "Financial Report",
+     "link_to": "Financial Report",
+     "link_type": "DocType",
+     "group": "Reporting"
+   },
+   {
+     "type": "DocType",
+     "label": "Budget",
+     "link_to": "Budget",
+     "link_type": "DocType",
+     "group": "Budgets"
+   },
+   {
+     "type": "DocType",
+     "label": "Cost Accounting",
+     "link_to": "Cost Accounting",
+     "link_type": "DocType",
+     "group": "Budgets"
+   }
+ ]
+}

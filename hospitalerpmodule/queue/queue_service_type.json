@@ -1,0 +1,75 @@
+{
+ "doctype": "DocType",
+ "module": "Queue",
+ "name": "Queue Service Type",
+ "description": "Queue service type configuration",
+ "search_fields": "service_type_name, prefix",
+ "title_field": "service_type_name",
+ "track_changes": 1,
+  "fields": [
+   {
+    "fieldname": "service_type_name",
+    "label": "Service Type Name",
+    "fieldtype": "Data",
+    "req": 1,
+    "unique": 1,
+    "in_list_view": 1
+   },
+   {
+    "fieldname": "department",
+    "label": "Department",
+    "fieldtype": "Link",
+    "options": "Medical Department",
+    "in_list_view": 1,
+    "in_standard_filter": 1
+   },
+   {
+    "fieldname": "prefix",
+    "label": "Prefix",
+    "fieldtype": "Data",
+    "help": "Token prefix e.g., OPD, IPD, LAB",
+    "in_list_view": 1
+   },
+  {
+   "fieldname": "starting_number",
+   "label": "Starting Number",
+   "fieldtype": "Int",
+   "default": 1
+  },
+  {
+   "fieldname": "average_service_time",
+   "label": "Average Service Time",
+   "fieldtype": "Int",
+   "help": "In minutes"
+  },
+  {
+   "fieldname": "description",
+   "label": "Description",
+   "fieldtype": "Data"
+  },
+   {
+    "fieldname": "is_active",
+    "label": "Is Active",
+    "fieldtype": "Check",
+    "default": 1,
+    "in_list_view": 1,
+    "in_standard_filter": 1
+   }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Medical Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  }
+ ]
+}

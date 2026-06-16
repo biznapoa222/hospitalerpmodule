@@ -1,6 +1,6 @@
 {
  "doctype": "DocType",
- "module_name": "HRM",
+ "module": "HRM",
  "name": "Payroll",
  "description": "Kenya payroll processing with PAYE, SHA, Housing Levy, and P9 form generation",
  "fields": [

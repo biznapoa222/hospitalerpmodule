@@ -1,6 +1,6 @@
 {
  "doctype": "DocType",
- "module_name": "HRM",
+ "module": "HRM",
  "name": "Shift Assignment",
  "description": "Assign shift types to employees",
  "fields": [

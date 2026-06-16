@@ -1,0 +1,111 @@
+{
+ "doctype": "DocType",
+ "module": "Healthcare",
+ "name": "Healthcare Service Unit",
+ "description": "Healthcare Service Unit master data",
+ "search_fields": "service_unit_name",
+ "title_field": "service_unit_name",
+ "track_changes": 1,
+  "fields": [
+   {
+    "fieldname": "service_unit_name",
+    "label": "Service Unit Name",
+    "fieldtype": "Data",
+    "req": 1,
+    "unique": 1,
+    "in_list_view": 1
+   },
+   {
+    "fieldname": "service_unit_type",
+    "label": "Service Unit Type",
+    "fieldtype": "Link",
+    "options": "Healthcare Service Unit Type",
+    "req": 1,
+    "in_list_view": 1,
+    "in_standard_filter": 1
+   },
+   {
+    "fieldname": "department",
+    "label": "Department",
+    "fieldtype": "Link",
+    "options": "Medical Department",
+    "in_list_view": 1,
+    "in_standard_filter": 1
+   },
+  {
+   "fieldname": "floor",
+   "label": "Floor",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "building",
+   "label": "Building",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "capacity",
+   "label": "Capacity",
+   "fieldtype": "Int",
+   "default": 1
+  },
+  {
+   "fieldname": "occupied",
+   "label": "Occupied",
+   "fieldtype": "Int",
+   "default": 0,
+   "read_only": 1
+  },
+   {
+    "fieldname": "is_available",
+    "label": "Is Available",
+    "fieldtype": "Check",
+    "default": 1,
+    "in_list_view": 1
+   },
+  {
+   "fieldname": "rate",
+   "label": "Rate",
+   "fieldtype": "Currency"
+  },
+  {
+   "fieldname": "description",
+   "label": "Description",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "notes",
+   "label": "Notes",
+   "fieldtype": "Text"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Doctor",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  },
+  {
+   "role": "Nurse",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Medical Administrator",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  }
+ ]
+}

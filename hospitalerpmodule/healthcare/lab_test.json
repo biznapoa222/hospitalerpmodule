@@ -1,0 +1,215 @@
+{
+ "doctype": "DocType",
+ "module": "Healthcare",
+  "name": "Lab Test",
+  "search_fields": "test_name, patient_name",
+  "title_field": "test_name",
+  "track_changes": 1,
+  "fields": [
+   {
+    "fieldname": "test_name",
+    "label": "Test Name",
+    "fieldtype": "Data",
+    "req": 1,
+    "in_list_view": 1
+   },
+  {
+   "fieldname": "lab_test_template",
+   "label": "Lab Test Template",
+   "fieldtype": "Link",
+   "options": "Lab Test Template"
+  },
+   {
+    "fieldname": "patient",
+    "label": "Patient",
+    "fieldtype": "Link",
+    "options": "Patient",
+    "req": 1,
+    "in_list_view": 1
+   },
+  {
+   "fieldname": "patient_name",
+   "label": "Patient Name",
+   "fieldtype": "Data",
+   "read_only": 1,
+   "fetch_from": "patient.patient_name"
+  },
+  {
+   "fieldname": "patient_age",
+   "label": "Patient Age",
+   "fieldtype": "Data",
+   "read_only": 1,
+   "fetch_from": "patient.age"
+  },
+  {
+   "fieldname": "patient_gender",
+   "label": "Patient Gender",
+   "fieldtype": "Data",
+   "read_only": 1,
+   "fetch_from": "patient.gender"
+  },
+   {
+    "fieldname": "practitioner",
+    "label": "Practitioner",
+    "fieldtype": "Link",
+    "options": "Healthcare Practitioner",
+    "in_list_view": 1
+   },
+  {
+   "fieldname": "encounter",
+   "label": "Encounter",
+   "fieldtype": "Link",
+   "options": "Patient Encounter"
+  },
+  {
+   "fieldname": "appointment",
+   "label": "Appointment",
+   "fieldtype": "Link",
+   "options": "Patient Appointment"
+  },
+   {
+    "fieldname": "department",
+    "label": "Department",
+    "fieldtype": "Link",
+    "options": "Medical Department",
+    "in_standard_filter": 1
+   },
+   {
+    "fieldname": "date",
+    "label": "Date",
+    "fieldtype": "Date",
+    "default": "Today",
+    "in_list_view": 1,
+    "in_standard_filter": 1
+   },
+  {
+   "fieldname": "time",
+   "label": "Time",
+   "fieldtype": "Time"
+  },
+  {
+   "fieldname": "sample_collected",
+   "label": "Sample Collected",
+   "fieldtype": "Link",
+   "options": "Sample Collection"
+  },
+  {
+   "fieldname": "sample_id",
+   "label": "Sample ID",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "collection_date",
+   "label": "Collection Date",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "collection_time",
+   "label": "Collection Time",
+   "fieldtype": "Time"
+  },
+  {
+   "fieldname": "result_date",
+   "label": "Result Date",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "result_time",
+   "label": "Result Time",
+   "fieldtype": "Time"
+  },
+   {
+    "fieldname": "status",
+    "label": "Status",
+    "fieldtype": "Select",
+    "options": "Pending\nSample Collected\nIn Progress\nCompleted\nVerified\nCancelled",
+    "default": "Pending",
+    "in_list_view": 1,
+    "in_standard_filter": 1
+   },
+  {
+   "fieldname": "results",
+   "label": "Results",
+   "fieldtype": "Table",
+   "options": "Lab Test Result"
+  },
+  {
+   "fieldname": "result_narrative",
+   "label": "Result Narrative",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "normal_range",
+   "label": "Normal Range",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "is_abnormal",
+   "label": "Is Abnormal",
+   "fieldtype": "Check",
+   "read_only": 1
+  },
+  {
+   "fieldname": "notes",
+   "label": "Notes",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "amount",
+   "label": "Amount",
+   "fieldtype": "Currency"
+  },
+   {
+    "fieldname": "billing_status",
+    "label": "Billing Status",
+    "fieldtype": "Select",
+    "options": "Pending\nBilled",
+    "default": "Pending",
+    "in_standard_filter": 1
+   }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Lab Technician",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Doctor",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  },
+  {
+   "role": "Nurse",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  },
+  {
+   "role": "Medical Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Patient",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  }
+ ]
+}

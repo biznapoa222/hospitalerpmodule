@@ -1,0 +1,91 @@
+{
+ "doctype": "DocType",
+ "module": "INVENTORY",
+ "name": "Warehouse",
+ "description": "Manage warehouse locations and storage areas",
+ "fields": [
+  {
+   "fieldname": "warehouse_name",
+   "label": "Warehouse Name",
+   "fieldtype": "Data",
+   "req": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "warehouse_code",
+   "label": "Warehouse Code",
+   "fieldtype": "Data",
+   "req": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "location",
+   "label": "Location",
+   "fieldtype": "Data",
+   "req": 1
+  },
+  {
+   "fieldname": "contact_person",
+   "label": "Contact Person",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "contact_phone",
+   "label": "Contact Phone",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "capacity",
+   "label": "Capacity",
+   "fieldtype": "Data",
+   "description": "e.g., 1000 sq ft, 500 pallets"
+  },
+  {
+   "fieldname": "is_active",
+   "label": "Is Active",
+   "fieldtype": "Check",
+   "default": 1
+  },
+  {
+   "fieldname": "manager",
+   "label": "Manager",
+   "fieldtype": "Link",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "created_by",
+   "label": "Created By",
+   "fieldtype": "Link",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "created_on",
+   "label": "Created On",
+   "fieldtype": "Date",
+   "default": "today"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Inventory Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Warehouse Staff",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  }
+ ]
+}

@@ -1,0 +1,75 @@
+{
+ "doctype": "Workspace",
+ "name": "Maternity",
+ "module": "Healthcare",
+ "category": "Modules",
+ "icon": "mother-child",
+ "label": "Maternity",
+ "description": "Antenatal, delivery, and postnatal care management",
+ "sequence_id": 7,
+ "is_default": 0,
+ "charts": [],
+ "shortcuts": [
+   {
+     "label": "New Patient",
+     "type": "DocType",
+     "link_to": "Patient",
+     "doc_view": "New",
+     "icon": "add",
+     "color": "blue"
+   },
+   {
+     "label": "Record Delivery",
+     "type": "DocType",
+     "link_to": "Patient Encounter",
+     "doc_view": "New",
+     "icon": "add",
+     "color": "green"
+   }
+ ],
+ "cards": [],
+ "number_cards": [],
+ "links": [
+   {
+     "label": "Patient",
+     "type": "DocType",
+     "link_to": "Patient",
+     "link_type": "DocType",
+     "group": "Antenatal",
+     "onboard": 1
+   },
+   {
+     "label": "Patient Appointment",
+     "type": "DocType",
+     "link_to": "Patient Appointment",
+     "link_type": "DocType",
+     "group": "Antenatal",
+     "onboard": 1
+   },
+   {
+     "label": "Patient Encounter",
+     "type": "DocType",
+     "link_to": "Patient Encounter",
+     "link_type": "DocType",
+     "group": "Antenatal",
+     "onboard": 1
+   },
+   {
+     "label": "Maternity Report",
+     "type": "DocType",
+     "link_to": "Maternity Report",
+     "link_type": "Report",
+     "group": "Reports",
+     "onboard": 0
+   },
+   {
+     "label": "Delivery Statistics",
+     "type": "DocType",
+     "link_to": "Delivery Statistics",
+     "link_type": "Report",
+     "group": "Reports",
+     "onboard": 0
+   }
+ ],
+ "custom_blocks": []
+}

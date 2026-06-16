@@ -1,0 +1,275 @@
+{
+ "doctype": "DocType",
+ "module": "Healthcare",
+ "name": "Patient",
+ "description": "Patient master data with demographic, contact, medical history and insurance details",
+ "autoname": "field:patient_code",
+ "title_field": "patient_name",
+ "image_field": "profile_image",
+ "search_fields": "patient_name, phone, patient_code",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "track_seen": 1,
+ "fields": [
+  {
+   "fieldname": "basic_info_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
+  {
+   "fieldname": "patient_name",
+   "label": "Patient Name",
+   "fieldtype": "Data",
+   "req": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "patient_code",
+   "label": "Patient Code",
+   "fieldtype": "Data",
+   "unique": 1,
+   "req": 1
+  },
+  {
+   "fieldname": "date_of_birth",
+   "label": "Date of Birth",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "age",
+   "label": "Age",
+   "fieldtype": "Data",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "gender",
+   "label": "Gender",
+   "fieldtype": "Select",
+   "options": "Male\nFemale\nOther",
+   "req": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "blood_group",
+   "label": "Blood Group",
+   "fieldtype": "Select",
+   "options": "A+\nA-\nB+\nB-\nAB+\nAB-\nO+\nO-"
+  },
+  {
+   "fieldname": "cb_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "marital_status",
+   "label": "Marital Status",
+   "fieldtype": "Select",
+   "options": "Single\nMarried\nDivorced\nWidowed"
+  },
+  {
+   "fieldname": "profile_image",
+   "label": "Profile Image",
+   "fieldtype": "Attach Image"
+  },
+  {
+   "fieldname": "patient_type",
+   "label": "Patient Type",
+   "fieldtype": "Select",
+   "options": "Outpatient\nInpatient\nBoth",
+   "in_standard_filter": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Select",
+   "options": "Active\nInactive\nDeceased",
+   "default": "Active",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "registration_date",
+   "label": "Registration Date",
+   "fieldtype": "Date",
+   "default": "Today"
+  },
+  {
+   "fieldname": "contact_section",
+   "fieldtype": "Section Break",
+   "label": "Contact Information"
+  },
+  {
+   "fieldname": "phone",
+   "label": "Phone",
+   "fieldtype": "Data",
+   "req": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "email",
+   "label": "Email",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "cb_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "address",
+   "label": "Address",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "city",
+   "label": "City",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "state",
+   "label": "State",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "country",
+   "label": "Country",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "pincode",
+   "label": "Pincode",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "emergency_section",
+   "fieldtype": "Section Break",
+   "label": "Emergency Contact"
+  },
+  {
+   "fieldname": "emergency_contact_person",
+   "label": "Emergency Contact Person",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "emergency_contact",
+   "label": "Emergency Contact",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "medical_section",
+   "fieldtype": "Section Break",
+   "label": "Medical Information"
+  },
+  {
+   "fieldname": "allergies",
+   "label": "Allergies",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "medical_history",
+   "label": "Medical History",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "current_medications",
+   "label": "Current Medications",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "chronic_conditions",
+   "label": "Chronic Conditions",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "past_surgeries",
+   "label": "Past Surgeries",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "cb_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "family_medical_history",
+   "label": "Family Medical History",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "occupation",
+   "label": "Occupation",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "employer",
+   "label": "Employer",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "referred_by",
+   "label": "Referred By",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "insurance_section",
+   "fieldtype": "Section Break",
+   "label": "Insurance Details"
+  },
+  {
+   "fieldname": "insurance_provider",
+   "label": "Insurance Provider",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "insurance_policy_number",
+   "label": "Insurance Policy Number",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "cb_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "insurance_coverage",
+   "label": "Insurance Coverage",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "notes",
+   "label": "Notes",
+   "fieldtype": "Text"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1, "write": 1, "create": 1, "delete": 1, "email": 1, "report": 1, "print": 1
+  },
+  {
+   "role": "Doctor",
+   "read": 1, "write": 1, "create": 1, "delete": 0, "email": 1, "report": 1, "print": 1
+  },
+  {
+   "role": "Nurse",
+   "read": 1, "write": 1, "create": 1, "delete": 0, "email": 0, "report": 1, "print": 1
+  },
+  {
+   "role": "Medical Administrator",
+   "read": 1, "write": 1, "create": 1, "delete": 0, "email": 1, "report": 1, "print": 1
+  },
+  {
+   "role": "Receptionist",
+   "read": 1, "write": 1, "create": 1, "delete": 0
+  },
+  {
+   "role": "Patient",
+   "read": 1, "write": 0, "create": 0, "delete": 0
+  }
+ ]
+}

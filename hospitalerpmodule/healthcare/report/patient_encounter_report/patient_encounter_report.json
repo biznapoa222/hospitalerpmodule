@@ -1,0 +1,14 @@
+{
+ "doctype": "Report",
+ "name": "Patient Encounter Report",
+ "module": "Healthcare",
+ "report_name": "Patient Encounter Report",
+ "report_type": "Script Report",
+ "ref_doctype": "Patient Encounter",
+ "is_standard": "Yes",
+ "roles": [
+  {"role": "System Manager"},
+  {"role": "Medical Administrator"},
+  {"role": "Doctor"}
+ ]
+}

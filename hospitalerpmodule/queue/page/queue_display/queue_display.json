@@ -1,0 +1,10 @@
+{
+ "doctype": "Page",
+ "name": "queue-display",
+ "module": "Queue",
+ "title": "Queue Display",
+ "icon": "fa fa-television",
+ "route": "queue-display",
+ "script": "queue_display.js",
+ "style": "queue_display.css"
+}

@@ -1,0 +1,131 @@
+{
+ "doctype": "DocType",
+ "module": "Healthcare",
+ "name": "Sample Collection",
+ "fields": [
+  {
+   "fieldname": "sample_name",
+   "label": "Sample Name",
+   "fieldtype": "Data",
+   "req": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "sample_type",
+   "label": "Sample Type",
+   "fieldtype": "Select",
+   "options": "Blood\nUrine\nStool\nSputum\nSwab\nTissue\nCSF\nOther"
+  },
+  {
+   "fieldname": "patient",
+   "label": "Patient",
+   "fieldtype": "Link",
+   "options": "Patient",
+   "req": 1
+  },
+  {
+   "fieldname": "patient_name",
+   "label": "Patient Name",
+   "fieldtype": "Data",
+   "read_only": 1,
+   "fetch_from": "patient.patient_name"
+  },
+  {
+   "fieldname": "practitioner",
+   "label": "Practitioner",
+   "fieldtype": "Link",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "lab_test",
+   "label": "Lab Test",
+   "fieldtype": "Link",
+   "options": "Lab Test"
+  },
+  {
+   "fieldname": "collection_date",
+   "label": "Collection Date",
+   "fieldtype": "Date",
+   "default": "Today"
+  },
+  {
+   "fieldname": "collection_time",
+   "label": "Collection Time",
+   "fieldtype": "Time"
+  },
+  {
+   "fieldname": "collected_by",
+   "label": "Collected By",
+   "fieldtype": "Link",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Select",
+   "options": "Pending\nCollected\nLabeled\nIn Transit\nReceived\nRejected\nCompleted",
+   "default": "Pending"
+  },
+  {
+   "fieldname": "container_type",
+   "label": "Container Type",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "volume",
+   "label": "Volume",
+   "fieldtype": "Float"
+  },
+  {
+   "fieldname": "volume_uom",
+   "label": "Volume UOM",
+   "fieldtype": "Data",
+   "default": "ml"
+  },
+  {
+   "fieldname": "storage_conditions",
+   "label": "Storage Conditions",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "rejection_reason",
+   "label": "Rejection Reason",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "notes",
+   "label": "Notes",
+   "fieldtype": "Text"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Lab Technician",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Nurse",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Medical Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  }
+ ]
+}

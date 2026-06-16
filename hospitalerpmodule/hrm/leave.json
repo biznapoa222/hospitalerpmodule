@@ -1,6 +1,6 @@
 {
  "doctype": "DocType",
- "module_name": "HRM",
+ "module": "HRM",
  "name": "Leave",
  "description": "Employee leave management with leave types, balances, and approval workflow",
  "fields": [

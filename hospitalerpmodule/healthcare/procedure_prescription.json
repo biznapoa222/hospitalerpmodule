@@ -1,0 +1,43 @@
+{
+ "doctype": "DocType",
+ "module": "Healthcare",
+ "name": "Procedure Prescription",
+ "is_child": 1,
+ "description": "Procedure prescription details",
+ "fields": [
+  {
+   "fieldname": "procedure",
+   "label": "Procedure",
+   "fieldtype": "Link",
+   "options": "Clinical Procedure Template",
+   "req": 1
+  },
+  {
+   "fieldname": "procedure_name",
+   "label": "Procedure Name",
+   "fieldtype": "Data",
+   "req": 1
+  },
+  {
+   "fieldname": "practitioner",
+   "label": "Practitioner",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "date",
+   "label": "Date",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Select",
+   "options": "Pending\nIn Progress\nCompleted\nCancelled"
+  },
+  {
+   "fieldname": "comments",
+   "label": "Comments",
+   "fieldtype": "Text"
+  }
+ ]
+}

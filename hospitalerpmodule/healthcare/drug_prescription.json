@@ -1,0 +1,75 @@
+{
+ "doctype": "DocType",
+ "module": "Healthcare",
+ "name": "Drug Prescription",
+ "is_child": 1,
+ "description": "Drug prescription details",
+ "fields": [
+  {
+   "fieldname": "drug",
+   "label": "Drug",
+   "fieldtype": "Data",
+   "req": 1
+  },
+  {
+   "fieldname": "dosage",
+   "label": "Dosage",
+   "fieldtype": "Data",
+   "req": 1,
+   "help": "e.g., 1 tablet"
+  },
+  {
+   "fieldname": "period",
+   "label": "Period",
+   "fieldtype": "Data",
+   "help": "e.g., Twice a Day"
+  },
+  {
+   "fieldname": "dosage_form",
+   "label": "Dosage Form",
+   "fieldtype": "Select",
+   "options": "Tablet\nCapsule\nSyrup\nInjection\nCream\nDrops\nInhaler\nOther"
+  },
+  {
+   "fieldname": "start_date",
+   "label": "Start Date",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "end_date",
+   "label": "End Date",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "days",
+   "label": "Days",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "route",
+   "label": "Route",
+   "fieldtype": "Data",
+   "help": "e.g., Oral, IV, Intramuscular"
+  },
+  {
+   "fieldname": "instruction",
+   "label": "Instruction",
+   "fieldtype": "Small Text"
+  },
+  {
+   "fieldname": "is_ongoing",
+   "label": "Is Ongoing",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "refill_count",
+   "label": "Refill Count",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "notes",
+   "label": "Notes",
+   "fieldtype": "Text"
+  }
+ ]
+}

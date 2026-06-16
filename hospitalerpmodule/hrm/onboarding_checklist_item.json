@@ -1,6 +1,6 @@
 {
  "doctype": "DocType",
- "module_name": "HRM",
+ "module": "HRM",
  "name": "Onboarding Checklist Item",
  "description": "Individual checklist items for employee onboarding process",
  "fields": [

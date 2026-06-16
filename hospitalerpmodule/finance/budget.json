@@ -1,0 +1,137 @@
+{
+ "doctype": "DocType",
+ "module": "FINANCE",
+ "name": "Budget",
+ "description": "Create and manage financial budgets for departments and projects",
+ "fields": [
+  {
+   "fieldname": "budget_name",
+   "label": "Budget Name",
+   "fieldtype": "Data",
+   "req": 1
+  },
+  {
+   "fieldname": "budget_type",
+   "label": "Budget Type",
+   "fieldtype": "Select",
+   "options": "Annual\nQuarterly\nMonthly\nProject\nDepartment",
+   "req": 1
+  },
+  {
+   "fieldname": "fiscal_year",
+   "label": "Fiscal Year",
+   "fieldtype": "Data",
+   "req": 1
+  },
+  {
+   "fieldname": "start_date",
+   "label": "Start Date",
+   "fieldtype": "Date",
+   "req": 1
+  },
+  {
+   "fieldname": "end_date",
+   "label": "End Date",
+   "fieldtype": "Date",
+   "req": 1
+  },
+  {
+   "fieldname": "department",
+   "label": "Department",
+   "fieldtype": "Link",
+   "options": "Department"
+  },
+  {
+   "fieldname": "project",
+   "label": "Project",
+   "fieldtype": "Link",
+   "options": "Project"
+  },
+  {
+   "fieldname": "account",
+   "label": "Account",
+   "fieldtype": "Link",
+   "options": "Account"
+  },
+  {
+   "fieldname": "budget_amount",
+   "label": "Budget Amount",
+   "fieldname": "Budget Amount",
+   "label": "Budget Amount",
+   "fieldtype": "Currency",
+   "req": 1
+  },
+  {
+   "fieldname": "actual_amount",
+   "label": "Actual Amount",
+   "fieldtype": "Currency",
+   "read_only": 1,
+   "default": 0
+  },
+  {
+   "fieldname": "variance_amount",
+   "label": "Variance Amount",
+   "fieldtype": "Currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "variance_percentage",
+   "label": "Variance Percentage",
+   "fieldtype": "Float",
+   "read_only": 1
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Select",
+   "options": "Draft\nSubmitted\nApproved\nActive\nOver Budget\nUnder Budget",
+   "default": "Draft"
+  },
+  {
+   "fieldname": "approved_by",
+   "label": "Approved By",
+   "fieldtype": "Link",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "approved_on",
+   "label": "Approved On",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "remarks",
+   "label": "Remarks",
+   "fieldtype": "Text"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Accountant",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Finance Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Department Head",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  }
+ ]
+}

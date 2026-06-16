@@ -1,0 +1,53 @@
+{
+ "doctype": "DocType",
+ "module": "Healthcare",
+ "name": "Lab Prescription",
+ "is_child": 1,
+ "description": "Lab test prescription details",
+ "fields": [
+  {
+   "fieldname": "lab_test",
+   "label": "Lab Test",
+   "fieldtype": "Link",
+   "options": "Lab Test Template",
+   "req": 1
+  },
+  {
+   "fieldname": "test_name",
+   "label": "Test Name",
+   "fieldtype": "Data",
+   "req": 1
+  },
+  {
+   "fieldname": "practitioner",
+   "label": "Practitioner",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "date",
+   "label": "Date",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Select",
+   "options": "Pending\nSample Collected\nIn Progress\nCompleted\nCancelled"
+  },
+  {
+   "fieldname": "result",
+   "label": "Result",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "normal_range",
+   "label": "Normal Range",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "comments",
+   "label": "Comments",
+   "fieldtype": "Text"
+  }
+ ]
+}

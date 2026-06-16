@@ -1,0 +1,81 @@
+{
+ "doctype": "DocType",
+ "module": "Healthcare",
+ "name": "Diagnosis",
+ "description": "Diagnosis master data",
+ "search_fields": "diagnosis, diagnosis_code",
+ "title_field": "diagnosis",
+ "track_changes": 1,
+  "fields": [
+   {
+    "fieldname": "diagnosis",
+    "label": "Diagnosis",
+    "fieldtype": "Data",
+    "req": 1,
+    "unique": 1,
+    "in_list_view": 1
+   },
+   {
+    "fieldname": "diagnosis_code",
+    "label": "Diagnosis Code",
+    "fieldtype": "Data",
+    "in_list_view": 1
+   },
+   {
+    "fieldname": "medical_code",
+    "label": "Medical Code",
+    "fieldtype": "Link",
+    "options": "Medical Code",
+    "in_list_view": 1,
+    "in_standard_filter": 1
+   },
+  {
+   "fieldname": "description",
+   "label": "Description",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "is_chronic",
+   "label": "Is Chronic",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "is_communicable",
+   "label": "Is Communicable",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "icd_code",
+   "label": "ICD Code",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "category",
+   "label": "Category",
+   "fieldtype": "Data"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Doctor",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Medical Administrator",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  }
+ ]
+}

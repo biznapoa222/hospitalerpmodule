@@ -1,0 +1,201 @@
+{
+ "doctype": "DocType",
+ "module": "Healthcare",
+ "name": "Patient Encounter",
+ "description": "Patient encounter documentation",
+ "fields": [
+  {
+   "fieldname": "encounter_code",
+   "label": "Encounter Code",
+   "fieldtype": "Data",
+   "unique": 1
+  },
+  {
+   "fieldname": "patient",
+   "label": "Patient",
+   "fieldtype": "Link",
+   "options": "Patient",
+   "req": 1
+  },
+  {
+   "fieldname": "patient_name",
+   "label": "Patient Name",
+   "fieldtype": "Data",
+   "read_only": 1,
+   "fetch_from": "patient.patient_name"
+  },
+  {
+   "fieldname": "patient_age",
+   "label": "Patient Age",
+   "fieldtype": "Data",
+   "read_only": 1,
+   "fetch_from": "patient.age"
+  },
+  {
+   "fieldname": "patient_gender",
+   "label": "Patient Gender",
+   "fieldtype": "Data",
+   "read_only": 1,
+   "fetch_from": "patient.gender"
+  },
+  {
+   "fieldname": "appointment",
+   "label": "Appointment",
+   "fieldtype": "Link",
+   "options": "Patient Appointment"
+  },
+  {
+   "fieldname": "practitioner",
+   "label": "Practitioner",
+   "fieldtype": "Link",
+   "options": "Healthcare Practitioner",
+   "req": 1
+  },
+  {
+   "fieldname": "department",
+   "label": "Department",
+   "fieldtype": "Link",
+   "options": "Medical Department"
+  },
+  {
+   "fieldname": "encounter_date",
+   "label": "Encounter Date",
+   "fieldtype": "Date",
+   "default": "Today"
+  },
+  {
+   "fieldname": "encounter_time",
+   "label": "Encounter Time",
+   "fieldtype": "Time"
+  },
+  {
+   "fieldname": "type",
+   "label": "Type",
+   "fieldtype": "Select",
+   "options": "OPD\nIPD\nEmergency\nFollow Up\nTelemedicine"
+  },
+  {
+   "fieldname": "symptoms",
+   "label": "Symptoms",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "chief_complaint",
+   "label": "Chief Complaint",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "history_of_present_illness",
+   "label": "History of Present Illness",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "past_medical_history",
+   "label": "Past Medical History",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "diagnosis",
+   "label": "Diagnosis",
+   "fieldtype": "Table",
+   "options": "Encounter Diagnosis"
+  },
+  {
+   "fieldname": "vital_signs",
+   "label": "Vital Signs",
+   "fieldtype": "Table",
+   "options": "Vital Signs"
+  },
+  {
+   "fieldname": "drug_prescription",
+   "label": "Drug Prescription",
+   "fieldtype": "Table",
+   "options": "Drug Prescription"
+  },
+  {
+   "fieldname": "lab_prescription",
+   "label": "Lab Prescription",
+   "fieldtype": "Table",
+   "options": "Lab Prescription"
+  },
+  {
+   "fieldname": "procedure_prescription",
+   "label": "Procedure Prescription",
+   "fieldtype": "Table",
+   "options": "Procedure Prescription"
+  },
+  {
+   "fieldname": "clinical_notes",
+   "label": "Clinical Notes",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "treatment_plan",
+   "label": "Treatment Plan",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "follow_up_date",
+   "label": "Follow Up Date",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "referred_to",
+   "label": "Referred To",
+   "fieldtype": "Link",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "referral_notes",
+   "label": "Referral Notes",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Select",
+   "options": "Draft\nSubmitted\nCompleted\nCancelled"
+  },
+  {
+   "fieldname": "billing_status",
+   "label": "Billing Status",
+   "fieldtype": "Select",
+   "options": "Pending\nPartially Billed\nBilled"
+  },
+  {
+   "fieldname": "notes",
+   "label": "Notes",
+   "fieldtype": "Text"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Doctor",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Nurse",
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "delete": 0
+  },
+  {
+   "role": "Medical Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  }
+ ]
+}

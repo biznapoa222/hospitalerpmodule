@@ -1,0 +1,87 @@
+{
+ "doctype": "DocType",
+ "module": "Healthcare",
+  "name": "Fee Validity",
+  "search_fields": "patient",
+  "track_changes": 1,
+  "fields": [
+   {
+    "fieldname": "patient",
+    "label": "Patient",
+    "fieldtype": "Link",
+    "options": "Patient",
+    "req": 1,
+    "in_list_view": 1
+   },
+   {
+    "fieldname": "practitioner",
+    "label": "Practitioner",
+    "fieldtype": "Link",
+    "options": "Healthcare Practitioner",
+    "req": 1,
+    "in_list_view": 1,
+    "in_standard_filter": 1
+   },
+   {
+    "fieldname": "validity_start_date",
+    "label": "Validity Start Date",
+    "fieldtype": "Date",
+    "default": "Today",
+    "in_list_view": 1
+   },
+  {
+   "fieldname": "validity_end_date",
+   "label": "Validity End Date",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "max_visits",
+   "label": "Max Visits",
+   "fieldtype": "Int",
+   "default": 1
+  },
+  {
+   "fieldname": "visited",
+   "label": "Visited",
+   "fieldtype": "Int",
+   "default": 0
+  },
+   {
+    "fieldname": "status",
+    "label": "Status",
+    "fieldtype": "Select",
+    "options": "Active\nExpired\nUsed Up",
+    "default": "Active",
+    "in_list_view": 1,
+    "in_standard_filter": 1
+   },
+  {
+   "fieldname": "notes",
+   "label": "Notes",
+   "fieldtype": "Text"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Medical Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Doctor",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  }
+ ]
+}

@@ -1,0 +1,83 @@
+{
+ "doctype": "Workspace",
+ "name": "Theatre",
+ "module": "Healthcare",
+ "category": "Modules",
+ "icon": "operating-theatre",
+ "label": "Theatre",
+ "description": "Operating theatre scheduling and surgical procedure management",
+ "sequence_id": 6,
+ "is_default": 0,
+ "charts": [],
+ "shortcuts": [
+   {
+     "label": "Schedule Surgery",
+     "type": "DocType",
+     "link_to": "Clinical Procedure",
+     "doc_view": "New",
+     "icon": "add",
+     "color": "blue"
+   },
+   {
+     "label": "New Template",
+     "type": "DocType",
+     "link_to": "Clinical Procedure Template",
+     "doc_view": "New",
+     "icon": "add",
+     "color": "green"
+   }
+ ],
+ "cards": [],
+ "number_cards": [],
+ "links": [
+   {
+     "label": "Clinical Procedure",
+     "type": "DocType",
+     "link_to": "Clinical Procedure",
+     "link_type": "DocType",
+     "group": "Surgery",
+     "onboard": 1
+   },
+   {
+     "label": "Clinical Procedure Template",
+     "type": "DocType",
+     "link_to": "Clinical Procedure Template",
+     "link_type": "DocType",
+     "group": "Surgery",
+     "onboard": 1
+   },
+   {
+     "label": "Healthcare Service Unit",
+     "type": "DocType",
+     "link_to": "Healthcare Service Unit",
+     "link_type": "DocType",
+     "group": "Resources",
+     "onboard": 0
+   },
+   {
+     "label": "Healthcare Practitioner",
+     "type": "DocType",
+     "link_to": "Healthcare Practitioner",
+     "link_type": "DocType",
+     "group": "Resources",
+     "onboard": 0
+   },
+   {
+     "label": "Theatre Utilization Report",
+     "type": "DocType",
+     "link_to": "Theatre Utilization Report",
+     "link_type": "Report",
+     "group": "Reports",
+     "onboard": 0
+   },
+   {
+     "label": "Surgery Analytics",
+     "type": "DocType",
+     "link_to": "Surgery Analytics",
+     "link_type": "Report",
+     "group": "Reports",
+     "onboard": 0
+   }
+ ],
+ "custom_blocks": []
+}

@@ -1,0 +1,103 @@
+{
+ "doctype": "DocType",
+ "module": "Healthcare",
+  "name": "Healthcare Settings",
+  "is_single": 1,
+  "track_changes": 1,
+  "fields": [
+  {
+   "fieldname": "disable",
+   "label": "Disable",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "automate_appointment_invoicing",
+   "label": "Automate Appointment Invoicing",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "collect_registration_fee",
+   "label": "Collect Registration Fee",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "registration_fee",
+   "label": "Registration Fee",
+   "fieldtype": "Currency"
+  },
+  {
+   "fieldname": "inpatient_registration_fee",
+   "label": "Inpatient Registration Fee",
+   "fieldtype": "Currency"
+  },
+  {
+   "fieldname": "default_appointment_duration",
+   "label": "Default Appointment Duration",
+   "fieldtype": "Int",
+   "default": 15
+  },
+  {
+   "fieldname": "max_appointments_per_day",
+   "label": "Max Appointments Per Day",
+   "fieldtype": "Int",
+   "default": 50
+  },
+  {
+   "fieldname": "enable_auto_sms_reminder",
+   "label": "Enable Auto SMS Reminder",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "reminder_hours_before",
+   "label": "Reminder Hours Before",
+   "fieldtype": "Int",
+   "default": 24
+  },
+  {
+   "fieldname": "enable_lab_integration",
+   "label": "Enable Lab Integration",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "enable_pharmacy_integration",
+   "label": "Enable Pharmacy Integration",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "default_medical_department",
+   "label": "Default Medical Department",
+   "fieldtype": "Link",
+   "options": "Medical Department"
+  },
+  {
+   "fieldname": "enable_telemedicine",
+   "label": "Enable Telemedicine",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "enable_electronic_medical_records",
+   "label": "Enable Electronic Medical Records",
+   "fieldtype": "Check",
+   "default": 1
+  },
+  {
+   "fieldname": "default_discharge_summary_template",
+   "label": "Default Discharge Summary Template",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "notes",
+   "label": "Notes",
+   "fieldtype": "Text"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  }
+ ]
+}

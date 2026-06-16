@@ -1,0 +1,134 @@
+{
+ "doctype": "DocType",
+ "module": "Healthcare",
+  "name": "Therapy Plan",
+  "search_fields": "plan_name, patient_name",
+  "title_field": "plan_name",
+  "track_changes": 1,
+  "fields": [
+   {
+    "fieldname": "plan_name",
+    "label": "Plan Name",
+    "fieldtype": "Data",
+    "req": 1,
+    "unique": 1,
+    "in_list_view": 1
+   },
+   {
+    "fieldname": "patient",
+    "label": "Patient",
+    "fieldtype": "Link",
+    "options": "Patient",
+    "req": 1,
+    "in_list_view": 1
+   },
+  {
+   "fieldname": "patient_name",
+   "label": "Patient Name",
+   "fieldtype": "Data",
+   "read_only": 1,
+   "fetch_from": "patient.patient_name"
+  },
+   {
+    "fieldname": "practitioner",
+    "label": "Practitioner",
+    "fieldtype": "Link",
+    "options": "Healthcare Practitioner",
+    "req": 1,
+    "in_list_view": 1
+   },
+  {
+   "fieldname": "encounter",
+   "label": "Encounter",
+   "fieldtype": "Link",
+   "options": "Patient Encounter"
+  },
+   {
+    "fieldname": "department",
+    "label": "Department",
+    "fieldtype": "Link",
+    "options": "Medical Department",
+    "in_standard_filter": 1
+   },
+   {
+    "fieldname": "start_date",
+    "label": "Start Date",
+    "fieldtype": "Date",
+    "default": "Today",
+    "in_list_view": 1,
+    "in_standard_filter": 1
+   },
+  {
+   "fieldname": "end_date",
+   "label": "End Date",
+   "fieldtype": "Date"
+  },
+   {
+    "fieldname": "status",
+    "label": "Status",
+    "fieldtype": "Select",
+    "options": "Planned\nIn Progress\nCompleted\nCancelled\nOn Hold",
+    "default": "Planned",
+    "in_list_view": 1,
+    "in_standard_filter": 1
+   },
+  {
+   "fieldname": "therapy_details",
+   "label": "Therapy Details",
+   "fieldtype": "Table",
+   "options": "Therapy Plan Detail"
+  },
+  {
+   "fieldname": "total_sessions",
+   "label": "Total Sessions",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "completed_sessions",
+   "label": "Completed Sessions",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "notes",
+   "label": "Notes",
+   "fieldtype": "Text"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Physiotherapist",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Doctor",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Nurse",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  },
+  {
+   "role": "Medical Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  }
+ ]
+}

@@ -1,0 +1,34 @@
+{
+ "doctype": "DocType",
+ "module": "Healthcare",
+ "name": "Lab Test Template Item",
+ "is_child": 1,
+ "fields": [
+  {
+   "fieldname": "test_name",
+   "label": "Test Name",
+   "fieldtype": "Data",
+   "req": 1
+  },
+  {
+   "fieldname": "test_code",
+   "label": "Test Code",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "normal_range",
+   "label": "Normal Range",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "unit",
+   "label": "Unit",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "description",
+   "label": "Description",
+   "fieldtype": "Text"
+  }
+ ]
+}

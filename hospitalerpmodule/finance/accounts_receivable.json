@@ -1,0 +1,155 @@
+{
+ "doctype": "DocType",
+ "module": "FINANCE",
+ "name": "Accounts Receivable",
+ "description": "Manage customer invoices, payments, and accounts receivable processes",
+ "fields": [
+  {
+   "fieldname": "customer",
+   "label": "Customer",
+   "fieldtype": "Link",
+   "options": "Customer",
+   "req": 1
+  },
+  {
+   "fieldname": "invoice_number",
+   "label": "Invoice Number",
+   "fieldtype": "Data",
+   "req": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "invoice_date",
+   "label": "Invoice Date",
+   "fieldtype": "Date",
+   "req": 1
+  },
+  {
+   "fieldname": "due_date",
+   "label": "Due Date",
+   "fieldtype": "Date",
+   "req": 1
+  },
+  {
+   "fieldname": "amount",
+   "label": "Amount",
+   "fieldtype": "Currency",
+   "req": 1
+  },
+  {
+   "fieldname": "tax_amount",
+   "label": "Tax Amount",
+   "fieldtype": "Currency",
+   "default": 0
+  },
+  {
+   "fieldname": "total_amount",
+   "label": "Total Amount",
+   "fieldtype": "Currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payment_terms",
+   "label": "Payment Terms",
+   "fieldtype": "Data",
+   "description": "e.g., Net 15, Net 30, Due on Receipt"
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Select",
+   "options": "Draft\nSubmitted\nApproved\nPaid\nOverdue\nCancelled",
+   "default": "Draft"
+  },
+  {
+   "fieldname": "approved_by",
+   "label": "Approved By",
+   "fieldtype": "Link",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "approved_on",
+   "label": "Approved On",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "payment_date",
+   "label": "Payment Date",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "payment_method",
+   "label": "Payment Method",
+   "fieldtype": "Select",
+   "options": "Bank Transfer\nCheque\nCash\nCredit Card\nDigital Wallet\nPayPal"
+  },
+  {
+   "fieldname": "bank_account",
+   "label": "Bank Account",
+   "fieldtype": "Link",
+   "options": "Bank Account"
+  },
+  {
+   "fieldname": "cheque_number",
+   "label": "Cheque Number",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "customer_invoice_url",
+   "label": "Customer Invoice URL",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "payment_reference",
+   "label": "Payment Reference",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "remarks",
+   "label": "Remarks",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "sales_order",
+   "label": "Sales Order",
+   "fieldtype": "Link",
+   "options": "Sales Order"
+  },
+  {
+   "fieldname": "department",
+   "label": "Department",
+   "fieldtype": "Link",
+   "options": "Department"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Accountant",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Finance Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Sales Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  }
+ ]
+}

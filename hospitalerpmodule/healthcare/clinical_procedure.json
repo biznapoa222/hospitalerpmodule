@@ -1,0 +1,160 @@
+{
+ "doctype": "DocType",
+ "module": "Healthcare",
+ "name": "Clinical Procedure",
+ "description": "Clinical procedure record",
+ "search_fields": "procedure_name, patient_name",
+ "title_field": "procedure_name",
+ "track_changes": 1,
+  "fields": [
+   {
+    "fieldname": "procedure_name",
+    "label": "Procedure Name",
+    "fieldtype": "Data",
+    "req": 1,
+    "unique": 1,
+    "in_list_view": 1
+   },
+  {
+   "fieldname": "procedure_template",
+   "label": "Procedure Template",
+   "fieldtype": "Link",
+   "options": "Clinical Procedure Template"
+  },
+   {
+    "fieldname": "patient",
+    "label": "Patient",
+    "fieldtype": "Link",
+    "options": "Patient",
+    "req": 1,
+    "in_list_view": 1
+   },
+  {
+   "fieldname": "patient_name",
+   "label": "Patient Name",
+   "fieldtype": "Data",
+   "read_only": 1,
+   "fetch_from": "patient.patient_name"
+  },
+   {
+    "fieldname": "practitioner",
+    "label": "Practitioner",
+    "fieldtype": "Link",
+    "options": "Healthcare Practitioner",
+    "req": 1,
+    "in_list_view": 1
+   },
+   {
+    "fieldname": "department",
+    "label": "Department",
+    "fieldtype": "Link",
+    "options": "Medical Department",
+    "in_standard_filter": 1
+   },
+  {
+   "fieldname": "service_unit",
+   "label": "Service Unit",
+   "fieldtype": "Link",
+   "options": "Healthcare Service Unit"
+  },
+  {
+   "fieldname": "appointment",
+   "label": "Appointment",
+   "fieldtype": "Link",
+   "options": "Patient Appointment"
+  },
+  {
+   "fieldname": "encounter",
+   "label": "Encounter",
+   "fieldtype": "Link",
+   "options": "Patient Encounter"
+  },
+   {
+    "fieldname": "date",
+    "label": "Date",
+    "fieldtype": "Date",
+    "default": "Today",
+    "in_list_view": 1,
+    "in_standard_filter": 1
+   },
+  {
+   "fieldname": "time",
+   "label": "Time",
+   "fieldtype": "Time"
+  },
+   {
+    "fieldname": "status",
+    "label": "Status",
+    "fieldtype": "Select",
+    "options": "Draft\nIn Progress\nCompleted\nCancelled\nPostponed",
+    "in_list_view": 1,
+    "in_standard_filter": 1
+   },
+  {
+   "fieldname": "start_time",
+   "label": "Start Time",
+   "fieldtype": "Time"
+  },
+  {
+   "fieldname": "end_time",
+   "label": "End Time",
+   "fieldtype": "Time"
+  },
+  {
+   "fieldname": "notes",
+   "label": "Notes",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "result",
+   "label": "Result",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "is_billable",
+   "label": "Is Billable",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "amount",
+   "label": "Amount",
+   "fieldtype": "Currency"
+  },
+  {
+   "fieldname": "billing_status",
+   "label": "Billing Status",
+   "fieldtype": "Select",
+   "options": "Pending\nBilled"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Doctor",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Nurse",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Medical Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  }
+ ]
+}

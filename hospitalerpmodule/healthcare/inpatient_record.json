@@ -1,0 +1,209 @@
+{
+ "doctype": "DocType",
+ "module": "Healthcare",
+  "name": "Inpatient Record",
+  "search_fields": "inpatient_code, patient_name",
+  "title_field": "inpatient_code",
+  "track_changes": 1,
+  "fields": [
+   {
+    "fieldname": "inpatient_code",
+    "label": "Inpatient Code",
+    "fieldtype": "Data",
+    "unique": 1,
+    "in_list_view": 1
+   },
+   {
+    "fieldname": "patient",
+    "label": "Patient",
+    "fieldtype": "Link",
+    "options": "Patient",
+    "req": 1,
+    "in_list_view": 1
+   },
+  {
+   "fieldname": "patient_name",
+   "label": "Patient Name",
+   "fieldtype": "Data",
+   "read_only": 1,
+   "fetch_from": "patient.patient_name"
+  },
+  {
+   "fieldname": "patient_age",
+   "label": "Patient Age",
+   "fieldtype": "Data",
+   "read_only": 1,
+   "fetch_from": "patient.age"
+  },
+  {
+   "fieldname": "patient_gender",
+   "label": "Patient Gender",
+   "fieldtype": "Data",
+   "read_only": 1,
+   "fetch_from": "patient.gender"
+  },
+   {
+    "fieldname": "primary_practitioner",
+    "label": "Primary Practitioner",
+    "fieldtype": "Link",
+    "options": "Healthcare Practitioner",
+    "req": 1,
+    "in_list_view": 1
+   },
+  {
+   "fieldname": "referring_practitioner",
+   "label": "Referring Practitioner",
+   "fieldtype": "Link",
+   "options": "Healthcare Practitioner"
+  },
+   {
+    "fieldname": "department",
+    "label": "Department",
+    "fieldtype": "Link",
+    "options": "Medical Department",
+    "in_standard_filter": 1
+   },
+  {
+   "fieldname": "service_unit",
+   "label": "Service Unit",
+   "fieldtype": "Link",
+   "options": "Healthcare Service Unit",
+   "req": 1
+  },
+   {
+    "fieldname": "admission_date",
+    "label": "Admission Date",
+    "fieldtype": "Datetime",
+    "req": 1,
+    "in_list_view": 1,
+    "in_standard_filter": 1
+   },
+  {
+   "fieldname": "expected_discharge_date",
+   "label": "Expected Discharge Date",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "discharge_date",
+   "label": "Discharge Date",
+   "fieldtype": "Datetime"
+  },
+   {
+    "fieldname": "admission_type",
+    "label": "Admission Type",
+    "fieldtype": "Select",
+    "options": "Emergency\nElective\nTransfer\nOther",
+    "in_standard_filter": 1
+   },
+  {
+   "fieldname": "diagnosis",
+   "label": "Diagnosis",
+   "fieldtype": "Table",
+   "options": "Encounter Diagnosis"
+  },
+  {
+   "fieldname": "complaints",
+   "label": "Complaints",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "admission_notes",
+   "label": "Admission Notes",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "treatment_plan",
+   "label": "Treatment Plan",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "medications",
+   "label": "Medications",
+   "fieldtype": "Table",
+   "options": "Drug Prescription"
+  },
+  {
+   "fieldname": "nursing_notes",
+   "label": "Nursing Notes",
+   "fieldtype": "Text"
+  },
+   {
+    "fieldname": "status",
+    "label": "Status",
+    "fieldtype": "Select",
+    "options": "Admitted\nTransferred\nDischarged\nCancelled",
+    "default": "Admitted",
+    "in_list_view": 1,
+    "in_standard_filter": 1
+   },
+  {
+   "fieldname": "discharge_type",
+   "label": "Discharge Type",
+   "fieldtype": "Select",
+   "options": "Recovered\nReferred\nAgainst Medical Advice\nExpired\nTransfer"
+  },
+  {
+   "fieldname": "discharge_summary",
+   "label": "Discharge Summary",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "follow_up_date",
+   "label": "Follow Up Date",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "insurance_details",
+   "label": "Insurance Details",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "insurance_claim_number",
+   "label": "Insurance Claim Number",
+   "fieldtype": "Data"
+  },
+   {
+    "fieldname": "billing_status",
+    "label": "Billing Status",
+    "fieldtype": "Select",
+    "options": "Pending\nPartially Billed\nBilled",
+    "default": "Pending",
+    "in_standard_filter": 1
+   },
+  {
+   "fieldname": "notes",
+   "label": "Notes",
+   "fieldtype": "Text"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Doctor",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Nurse",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Medical Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  }
+ ]
+}

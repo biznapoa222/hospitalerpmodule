@@ -1,0 +1,75 @@
+{
+ "doctype": "DocType",
+ "module": "Healthcare",
+ "name": "Medical Code",
+ "description": "Medical Code master data",
+ "search_fields": "code, code_description",
+ "title_field": "code",
+ "track_changes": 1,
+  "fields": [
+   {
+    "fieldname": "code",
+    "label": "Code",
+    "fieldtype": "Data",
+    "req": 1,
+    "in_list_view": 1
+   },
+  {
+   "fieldname": "code_description",
+   "label": "Code Description",
+   "fieldtype": "Text",
+   "req": 1
+  },
+   {
+    "fieldname": "medical_code_standard",
+    "label": "Medical Code Standard",
+    "fieldtype": "Link",
+    "options": "Medical Code Standard",
+    "req": 1,
+    "in_list_view": 1,
+    "in_standard_filter": 1
+   },
+  {
+   "fieldname": "category",
+   "label": "Category",
+   "fieldtype": "Data"
+  },
+   {
+    "fieldname": "is_billable",
+    "label": "Is Billable",
+    "fieldtype": "Check",
+    "default": 1,
+    "in_list_view": 1
+   },
+   {
+    "fieldname": "is_active",
+    "label": "Is Active",
+    "fieldtype": "Check",
+    "default": 1,
+    "in_standard_filter": 1
+   }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Doctor",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  },
+  {
+   "role": "Medical Administrator",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  }
+ ]
+}

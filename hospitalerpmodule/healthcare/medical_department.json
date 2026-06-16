@@ -1,0 +1,129 @@
+{
+ "doctype": "DocType",
+ "module": "Healthcare",
+ "name": "Medical Department",
+ "description": "Medical Department master data",
+ "search_fields": "department",
+ "title_field": "department",
+ "track_changes": 1,
+  "fields": [
+   {
+    "fieldname": "department",
+    "label": "Department",
+    "fieldtype": "Data",
+    "req": 1,
+    "unique": 1,
+    "in_list_view": 1
+   },
+   {
+    "fieldname": "department_code",
+    "label": "Department Code",
+    "fieldtype": "Data",
+    "in_list_view": 1
+   },
+  {
+   "fieldname": "description",
+   "label": "Description",
+   "fieldtype": "Text"
+  },
+   {
+    "fieldname": "is_active",
+    "label": "Is Active",
+    "fieldtype": "Check",
+    "default": 1,
+    "in_list_view": 1,
+    "in_standard_filter": 1
+   },
+  {
+   "fieldname": "parent_department",
+   "label": "Parent Department",
+   "fieldtype": "Link",
+   "options": "Medical Department"
+  },
+  {
+   "fieldname": "head_of_department",
+   "label": "Head of Department",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "floor",
+   "label": "Floor",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "extension",
+   "label": "Extension",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "email",
+   "label": "Email",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "is_opd",
+   "label": "Is OPD",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "is_ipd",
+   "label": "Is IPD",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "is_emergency",
+   "label": "Is Emergency",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "is_operating_theater",
+   "label": "Is Operating Theater",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "is_lab",
+   "label": "Is Lab",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "is_pharmacy",
+   "label": "Is Pharmacy",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "is_radiology",
+   "label": "Is Radiology",
+   "fieldtype": "Check"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Doctor",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  },
+  {
+   "role": "Nurse",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  },
+  {
+   "role": "Medical Administrator",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  }
+ ]
+}

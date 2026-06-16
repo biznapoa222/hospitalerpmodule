@@ -1,0 +1,49 @@
+{
+ "doctype": "Workspace",
+ "name": "Inventory",
+ "module": "Inventory",
+ "category": "Modules",
+ "icon": "warehouse",
+ "label": "Inventory",
+ "description": "Manage items, warehouses, stock entries, purchases and sales",
+ "charts": [],
+ "shortcuts": [],
+ "cards": [],
+ "links": [
+   {
+     "type": "DocType",
+     "label": "Item",
+     "link_to": "Item",
+     "link_type": "DocType",
+     "group": "Master Data"
+   },
+   {
+     "type": "DocType",
+     "label": "Warehouse",
+     "link_to": "Warehouse",
+     "link_type": "DocType",
+     "group": "Master Data"
+   },
+   {
+     "type": "DocType",
+     "label": "Stock Entry",
+     "link_to": "Stock Entry",
+     "link_type": "DocType",
+     "group": "Stock"
+   },
+   {
+     "type": "DocType",
+     "label": "Purchase Order",
+     "link_to": "Purchase Order",
+     "link_type": "DocType",
+     "group": "Orders"
+   },
+   {
+     "type": "DocType",
+     "label": "Sales Order",
+     "link_to": "Sales Order",
+     "link_type": "DocType",
+     "group": "Orders"
+   }
+ ]
+}

@@ -1,0 +1,131 @@
+{
+ "doctype": "DocType",
+ "module": "Healthcare",
+  "name": "Lab Test Template",
+  "search_fields": "test_name, test_code",
+  "title_field": "test_name",
+  "track_changes": 1,
+  "fields": [
+   {
+    "fieldname": "test_name",
+    "label": "Test Name",
+    "fieldtype": "Data",
+    "req": 1,
+    "unique": 1,
+    "in_list_view": 1
+   },
+  {
+   "fieldname": "test_code",
+   "label": "Test Code",
+   "fieldtype": "Data"
+  },
+   {
+    "fieldname": "department",
+    "label": "Department",
+    "fieldtype": "Link",
+    "options": "Medical Department",
+    "in_list_view": 1,
+    "in_standard_filter": 1
+   },
+   {
+    "fieldname": "test_type",
+    "label": "Test Type",
+    "fieldtype": "Select",
+    "options": "Single\nCompound\nDescriptive\nGrouped",
+    "in_list_view": 1,
+    "in_standard_filter": 1
+   },
+  {
+   "fieldname": "lab_test_group",
+   "label": "Lab Test Group",
+   "fieldtype": "Link",
+   "options": "Lab Test Template"
+  },
+  {
+   "fieldname": "sample_required",
+   "label": "Sample Required",
+   "fieldtype": "Check",
+   "default": 1
+  },
+  {
+   "fieldname": "sample_type",
+   "label": "Sample Type",
+   "fieldtype": "Link",
+   "options": "Sample Collection"
+  },
+   {
+    "fieldname": "rate",
+    "label": "Rate",
+    "fieldtype": "Currency",
+    "in_list_view": 1
+   },
+  {
+   "fieldname": "description",
+   "label": "Description",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "result_format",
+   "label": "Result Format",
+   "fieldtype": "Select",
+   "options": "Quantitative\nQualitative\nDescriptive\nMultiple"
+  },
+  {
+   "fieldname": "normal_range",
+   "label": "Normal Range",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "unit",
+   "label": "Unit",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "is_billable",
+   "label": "Is Billable",
+   "fieldtype": "Check",
+   "default": 1
+  },
+  {
+   "fieldname": "items",
+   "label": "Items",
+   "fieldtype": "Table",
+   "options": "Lab Test Template Item"
+  },
+  {
+   "fieldname": "notes",
+   "label": "Notes",
+   "fieldtype": "Text"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Lab Technician",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Doctor",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  },
+  {
+   "role": "Medical Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  }
+ ]
+}

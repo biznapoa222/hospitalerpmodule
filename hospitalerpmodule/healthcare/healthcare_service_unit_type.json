@@ -1,0 +1,110 @@
+{
+ "doctype": "DocType",
+ "module": "Healthcare",
+ "name": "Healthcare Service Unit Type",
+  "description": "Healthcare Service Unit Type master data",
+  "search_fields": "service_unit_type_name",
+  "title_field": "service_unit_type_name",
+  "track_changes": 1,
+  "fields": [
+   {
+    "fieldname": "service_unit_type_name",
+    "label": "Service Unit Type Name",
+    "fieldtype": "Data",
+    "req": 1,
+    "unique": 1,
+    "in_list_view": 1
+   },
+  {
+   "fieldname": "description",
+   "label": "Description",
+   "fieldtype": "Text"
+  },
+   {
+    "fieldname": "is_bed",
+    "label": "Is Bed",
+    "fieldtype": "Check",
+    "description": "If this unit type is a bed",
+    "in_list_view": 1
+   },
+  {
+   "fieldname": "is_ward",
+   "label": "Is Ward",
+   "fieldtype": "Check"
+  },
+   {
+    "fieldname": "is_icu",
+    "label": "Is ICU",
+    "fieldtype": "Check",
+    "in_list_view": 1
+   },
+  {
+   "fieldname": "is_operating_theater",
+   "label": "Is Operating Theater",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "is_consulting_room",
+   "label": "Is Consulting Room",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "is_emergency_room",
+   "label": "Is Emergency Room",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "is_lab",
+   "label": "Is Lab",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "is_pharmacy",
+   "label": "Is Pharmacy",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "is_radiology",
+   "label": "Is Radiology",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "allow_appointments",
+   "label": "Allow Appointments",
+   "fieldtype": "Check"
+  },
+   {
+    "fieldname": "billable",
+    "label": "Billable",
+    "fieldtype": "Check",
+    "default": 1,
+    "in_list_view": 1
+   },
+  {
+   "fieldname": "daily_rate",
+   "label": "Daily Rate",
+   "fieldtype": "Currency"
+  },
+  {
+   "fieldname": "hourly_rate",
+   "label": "Hourly Rate",
+   "fieldtype": "Currency"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Medical Administrator",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  }
+ ]
+}

@@ -1,0 +1,160 @@
+{
+  "doctype": "DocType",
+  "module": "HRM",
+  "name": "Dashboard",
+  "description": "Comprehensive dashboard for hospital management with key metrics, charts, and summary information across all modules",
+  "fields": [
+    {
+      "fieldname": "dashboard_name",
+      "label": "Dashboard Name",
+      "fieldtype": "Data",
+      "req": 1,
+      "unique": 1
+    },
+    {
+      "fieldname": "dashboard_code",
+      "label": "Dashboard Code",
+      "fieldtype": "Data",
+      "req": 1
+    },
+    {
+      "fieldname": "dashboard_type",
+      "label": "Dashboard Type",
+      "fieldtype": "Select",
+      "options": "Operational\nFinancial\nClinical\nAdministrative\nCustom\nModule-Wide"
+    },
+    {
+      "fieldname": "target_module",
+      "label": "Target Module",
+      "fieldtype": "Select",
+      "options": "HRM\nBiznapoa Healthcare\nAll Modules"
+    },
+    {
+      "fieldname": "is_default",
+      "label": "Is Default",
+      "fieldtype": "Check",
+      "default": 0
+    },
+    {
+      "fieldname": "layout",
+      "label": "Layout",
+      "fieldtype": "Select",
+      "options": "Grid\nList\nCards\nMixed\nDashboard",
+      "default": "Dashboard"
+    },
+    {
+      "fieldname": "refresh_interval",
+      "label": "Refresh Interval (seconds)",
+      "fieldtype": "Int",
+      "default": 60
+    },
+    {
+      "fieldname": "color_scheme",
+      "label": "Color Scheme",
+      "fieldtype": "Select",
+      "options": "Blue\nGreen\nDark\nLight\nCustom",
+      "default": "Blue"
+    },
+    {
+      "fieldname": "show_patient_metrics",
+      "label": "Show Patient Metrics",
+      "fieldtype": "Check",
+      "default": 1
+    },
+    {
+      "fieldname": "show_staff_metrics",
+      "label": "Show Staff Metrics",
+      "fieldtype": "Check",
+      "default": 1
+    },
+    {
+      "fieldname": "show_appointment_metrics",
+      "label": "Show Appointment Metrics",
+      "fieldtype": "Check",
+      "default": 1
+    },
+    {
+      "fieldname": "show_financial_metrics",
+      "label": "Show Financial Metrics",
+      "fieldtype": "Check",
+      "default": 1
+    },
+    {
+      "fieldname": "show_department_charts",
+      "label": "Show Department Charts",
+      "fieldtype": "Check",
+      "default": 1
+    },
+    {
+      "fieldname": "show_revenue_trends",
+      "label": "Show Revenue Trends",
+      "fieldtype": "Check",
+      "default": 1
+    },
+    {
+      "fieldname": "show_patient_distribution",
+      "label": "Show Patient Distribution",
+      "fieldtype": "Check",
+      "default": 1
+    },
+    {
+      "fieldname": "show_module_distribution",
+      "label": "Show Module Distribution",
+      "fieldtype": "Check",
+      "default": 1
+    },
+    {
+      "fieldname": "header_text",
+      "label": "Header Text",
+      "fieldtype": "Small Text"
+    },
+    {
+      "fieldname": "footer_text",
+      "label": "Footer Text",
+      "fieldtype": "Small Text"
+    },
+    {
+      "fieldname": "description",
+      "label": "Description",
+      "fieldtype": "Text",
+      "rows": 3
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "HR Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 0
+    },
+    {
+      "role": "HR Clerk",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 0
+    },
+    {
+      "role": "Doctor",
+      "read": 1,
+      "write": 0,
+      "create": 0,
+      "delete": 0
+    },
+    {
+      "role": "Nurse",
+      "read": 1,
+      "write": 0,
+      "create": 0,
+      "delete": 0
+    }
+  ]
+}

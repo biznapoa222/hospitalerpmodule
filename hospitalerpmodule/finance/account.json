@@ -1,0 +1,124 @@
+{
+ "doctype": "DocType",
+ "module": "FINANCE",
+ "name": "Account",
+ "description": "Chart of accounts for financial tracking and reporting",
+ "fields": [
+  {
+   "fieldname": "account_name",
+   "label": "Account Name",
+   "fieldtype": "Data",
+   "req": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "account_type",
+   "label": "Account Type",
+   "fieldtype": "Select",
+   "options": "Asset\nLiability\nEquity\nIncome\nExpense",
+   "req": 1
+  },
+  {
+   "fieldname": "parent_account",
+   "label": "Parent Account",
+   "fieldtype": "Link",
+   "options": "Account"
+  },
+  {
+   "fieldname": "account_code",
+   "label": "Account Code",
+   "fieldtype": "Data",
+   "description": "Unique identifier for the account"
+  },
+  {
+   "fieldname": "is_group",
+   "label": "Is Group",
+   "fieldtype": "Check",
+   "default": 0
+  },
+  {
+   "fieldname": "opening_balance",
+   "label": "Opening Balance",
+   "fieldtype": "Currency",
+   "default": 0
+  },
+  {
+   "fieldname": "current_debit",
+   "label": "Current Debit",
+   "fieldtype": "Currency",
+   "read_only": 1,
+   "default": 0
+  },
+  {
+   "fieldname": "current_credit",
+   "label": "Current Credit",
+   "fieldtype": "Currency",
+   "read_only": 1,
+   "default": 0
+  },
+  {
+   "fieldname": "balance",
+   "label": "Balance",
+   "fieldtype": "Currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "description",
+   "label": "Description",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "department",
+   "label": "Department",
+   "fieldtype": "Link",
+   "options": "Department"
+  },
+  {
+   "fieldname": "cost_center",
+   "label": "Cost Center",
+   "fieldtype": "Link",
+   "options": "Cost Center"
+  },
+  {
+   "fieldname": "is_active",
+   "label": "Is Active",
+   "fieldtype": "Check",
+   "default": 1
+  },
+  {
+   "fieldname": "created_by",
+   "label": "Created By",
+   "fieldtype": "Link",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "created_on",
+   "label": "Created On",
+   "fieldtype": "Date",
+   "default": "today"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Accountant",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Finance Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  }
+ ]
+}

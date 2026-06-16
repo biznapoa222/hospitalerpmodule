@@ -1,0 +1,107 @@
+{
+ "doctype": "Workspace",
+ "name": "Reception",
+ "module": "Healthcare",
+ "category": "Modules",
+ "icon": "reception",
+ "label": "Reception",
+ "description": "Patient registration, appointment scheduling, and queue management",
+ "sequence_id": 2,
+ "is_default": 0,
+ "charts": [],
+ "shortcuts": [
+   {
+     "label": "Register Patient",
+     "type": "DocType",
+     "link_to": "Patient",
+     "doc_view": "New",
+     "icon": "add",
+     "color": "blue"
+   },
+   {
+     "label": "Book Appointment",
+     "type": "DocType",
+     "link_to": "Patient Appointment",
+     "doc_view": "New",
+     "icon": "add",
+     "color": "green"
+   },
+   {
+     "label": "Issue Token",
+     "type": "DocType",
+     "link_to": "Queue Ticket",
+     "doc_view": "New",
+     "icon": "add",
+     "color": "orange"
+   }
+ ],
+ "cards": [],
+ "number_cards": [],
+ "links": [
+   {
+     "label": "Patient",
+     "type": "DocType",
+     "link_to": "Patient",
+     "link_type": "DocType",
+     "group": "Registration",
+     "onboard": 1
+   },
+   {
+     "label": "Patient Appointment",
+     "type": "DocType",
+     "link_to": "Patient Appointment",
+     "link_type": "DocType",
+     "group": "Appointments",
+     "onboard": 1
+   },
+   {
+     "label": "Appointment Type",
+     "type": "DocType",
+     "link_to": "Appointment Type",
+     "link_type": "DocType",
+     "group": "Appointments",
+     "onboard": 0
+   },
+   {
+     "label": "Queue Ticket",
+     "type": "DocType",
+     "link_to": "Queue Ticket",
+     "link_type": "DocType",
+     "group": "Queue Management",
+     "onboard": 0
+   },
+   {
+     "label": "Queue Counter",
+     "type": "DocType",
+     "link_to": "Queue Counter",
+     "link_type": "DocType",
+     "group": "Queue Management",
+     "onboard": 0
+   },
+   {
+     "label": "Queue Service Type",
+     "type": "DocType",
+     "link_to": "Queue Service Type",
+     "link_type": "DocType",
+     "group": "Queue Management",
+     "onboard": 0
+   },
+   {
+     "label": "Appointment Analytics",
+     "type": "DocType",
+     "link_to": "Appointment Analytics",
+     "link_type": "Report",
+     "group": "Reports",
+     "onboard": 0
+   },
+   {
+     "label": "Patient Registration Report",
+     "type": "DocType",
+     "link_to": "Patient Registration Report",
+     "link_type": "Report",
+     "group": "Reports",
+     "onboard": 0
+   }
+ ],
+ "custom_blocks": []
+}

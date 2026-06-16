@@ -1,0 +1,109 @@
+{
+ "doctype": "DocType",
+ "module": "INVENTORY",
+ "name": "Sales Order",
+ "description": "Manage sales orders and customer transactions",
+ "fields": [
+  {
+   "fieldname": "so_number",
+   "label": "SO Number",
+   "fieldtype": "Data",
+   "req": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "customer",
+   "label": "Customer",
+   "fieldtype": "Link",
+   "options": "Customer",
+   "req": 1
+  },
+  {
+   "fieldname": "order_date",
+   "label": "Order Date",
+   "fieldtype": "Date",
+   "req": 1
+  },
+  {
+   "fieldname": "expected_delivery_date",
+   "label": "Expected Delivery Date",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Select",
+   "options": "Draft\nSubmitted\nApproved\nOrdered\nPartially Delivered\nCompleted\nCancelled",
+   "default": "Draft"
+  },
+  {
+   "fieldname": "approved_by",
+   "label": "Approved By",
+   "fieldtype": "Link",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "approved_on",
+   "label": "Approved On",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "items",
+   "label": "Items",
+   "fieldtype": "Table",
+   "options": "Sales Order Item"
+  },
+  {
+   "fieldname": "payment_terms",
+   "label": "Payment Terms",
+   "fieldtype": "Data",
+   "description": "e.g., Net 15, Net 30, Due on Receipt"
+  },
+  {
+   "fieldname": "delivery_address",
+   "label": "Delivery Address",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "remarks",
+   "label": "Remarks",
+   "fieldtype": "Text"
+  },
+  {
+   "fieldname": "department",
+   "label": "Department",
+   "fieldtype": "Link",
+   "options": "Department"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Inventory Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Sales Clerk",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Customer",
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "delete": 0
+  }
+ ]
+}

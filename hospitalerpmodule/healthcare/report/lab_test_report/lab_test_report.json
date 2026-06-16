@@ -1,0 +1,15 @@
+{
+ "doctype": "Report",
+ "name": "Lab Test Report",
+ "module": "Healthcare",
+ "report_name": "Lab Test Report",
+ "report_type": "Script Report",
+ "ref_doctype": "Lab Test",
+ "is_standard": "Yes",
+ "roles": [
+  {"role": "System Manager"},
+  {"role": "Medical Administrator"},
+  {"role": "Lab Technician"},
+  {"role": "Doctor"}
+ ]
+}

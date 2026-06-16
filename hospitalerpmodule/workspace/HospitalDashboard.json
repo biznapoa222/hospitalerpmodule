@@ -1,0 +1,131 @@
+{
+ "doctype": "Workspace",
+ "name": "Hospital Dashboard",
+ "module": "Healthcare",
+ "category": "Modules",
+ "icon": "dashboard",
+ "label": "Hospital Dashboard",
+ "description": "Complete hospital overview with key performance indicators",
+ "sequence_id": 1,
+ "is_default": 1,
+ "charts": [],
+ "shortcuts": [
+   {
+     "label": "New Patient",
+     "type": "DocType",
+     "link_to": "Patient",
+     "doc_view": "New",
+     "icon": "add",
+     "color": "blue"
+   },
+   {
+     "label": "New Appointment",
+     "type": "DocType",
+     "link_to": "Patient Appointment",
+     "doc_view": "New",
+     "icon": "add",
+     "color": "green"
+   },
+   {
+     "label": "New Encounter",
+     "type": "DocType",
+     "link_to": "Patient Encounter",
+     "doc_view": "New",
+     "icon": "add",
+     "color": "red"
+   },
+   {
+     "label": "Queue Display",
+     "type": "Page",
+     "link_to": "queue-display",
+     "doc_view": "",
+     "icon": "queue",
+     "color": "orange"
+   }
+ ],
+ "cards": [],
+ "number_cards": [],
+ "links": [
+   {
+     "label": "Patient",
+     "type": "DocType",
+     "link_to": "Patient",
+     "link_type": "DocType",
+     "group": "Quick Overview",
+     "onboard": 1
+   },
+   {
+     "label": "Patient Appointment",
+     "type": "DocType",
+     "link_to": "Patient Appointment",
+     "link_type": "DocType",
+     "group": "Quick Overview",
+     "onboard": 1
+   },
+   {
+     "label": "Patient Encounter",
+     "type": "DocType",
+     "link_to": "Patient Encounter",
+     "link_type": "DocType",
+     "group": "Quick Overview",
+     "onboard": 1
+   },
+   {
+     "label": "Queue Ticket",
+     "type": "DocType",
+     "link_to": "Queue Ticket",
+     "link_type": "DocType",
+     "group": "Quick Overview",
+     "onboard": 0
+   },
+   {
+     "label": "Vital Signs",
+     "type": "DocType",
+     "link_to": "Vital Signs",
+     "link_type": "DocType",
+     "group": "Today's Summary",
+     "onboard": 0
+   },
+   {
+     "label": "Lab Test",
+     "type": "DocType",
+     "link_to": "Lab Test",
+     "link_type": "DocType",
+     "group": "Today's Summary",
+     "onboard": 0
+   },
+   {
+     "label": "Inpatient Record",
+     "type": "DocType",
+     "link_to": "Inpatient Record",
+     "link_type": "DocType",
+     "group": "Today's Summary",
+     "onboard": 0
+   },
+   {
+     "label": "Appointment Analytics",
+     "type": "DocType",
+     "link_to": "Appointment Analytics",
+     "link_type": "Report",
+     "group": "Reports",
+     "onboard": 0
+   },
+   {
+     "label": "Lab Test Report",
+     "type": "DocType",
+     "link_to": "Lab Test Report",
+     "link_type": "Report",
+     "group": "Reports",
+     "onboard": 0
+   },
+   {
+     "label": "Patient History",
+     "type": "DocType",
+     "link_to": "Patient History",
+     "link_type": "Report",
+     "group": "Reports",
+     "onboard": 0
+   }
+ ],
+ "custom_blocks": []
+}

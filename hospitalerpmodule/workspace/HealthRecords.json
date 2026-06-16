@@ -1,0 +1,99 @@
+{
+ "doctype": "Workspace",
+ "name": "Health Records",
+ "module": "Healthcare",
+ "category": "Modules",
+ "icon": "file-medical",
+ "label": "Health Records",
+ "description": "Patient medical records, document management, and history",
+ "sequence_id": 10,
+ "is_default": 0,
+ "charts": [],
+ "shortcuts": [
+   {
+     "label": "Patient History",
+     "type": "DocType",
+     "link_to": "Patient",
+     "doc_view": "List",
+     "icon": "file-text",
+     "color": "blue"
+   },
+   {
+     "label": "New Document",
+     "type": "DocType",
+     "link_to": "File",
+     "doc_view": "New",
+     "icon": "add",
+     "color": "green"
+   }
+ ],
+ "cards": [],
+ "number_cards": [],
+ "links": [
+   {
+     "label": "Patient",
+     "type": "DocType",
+     "link_to": "Patient",
+     "link_type": "DocType",
+     "group": "Patient Records",
+     "onboard": 1
+   },
+   {
+     "label": "Patient Encounter",
+     "type": "DocType",
+     "link_to": "Patient Encounter",
+     "link_type": "DocType",
+     "group": "Patient Records",
+     "onboard": 1
+   },
+   {
+     "label": "Patient Appointment",
+     "type": "DocType",
+     "link_to": "Patient Appointment",
+     "link_type": "DocType",
+     "group": "Patient Records",
+     "onboard": 0
+   },
+   {
+     "label": "Vital Signs",
+     "type": "DocType",
+     "link_to": "Vital Signs",
+     "link_type": "DocType",
+     "group": "Clinical History",
+     "onboard": 0
+   },
+   {
+     "label": "Lab Test",
+     "type": "DocType",
+     "link_to": "Lab Test",
+     "link_type": "DocType",
+     "group": "Clinical History",
+     "onboard": 0
+   },
+   {
+     "label": "Clinical Procedure",
+     "type": "DocType",
+     "link_to": "Clinical Procedure",
+     "link_type": "DocType",
+     "group": "Clinical History",
+     "onboard": 0
+   },
+   {
+     "label": "Patient History Report",
+     "type": "DocType",
+     "link_to": "Patient History Report",
+     "link_type": "Report",
+     "group": "Reports",
+     "onboard": 0
+   },
+   {
+     "label": "Records Audit",
+     "type": "DocType",
+     "link_to": "Records Audit",
+     "link_type": "Report",
+     "group": "Reports",
+     "onboard": 0
+   }
+ ],
+ "custom_blocks": []
+}
