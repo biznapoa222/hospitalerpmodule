@@ -28,5 +28,3 @@ standard_entries = []
 
 docs_url = ""
 app_website_url = ""
-
-has_permission = None
