@@ -1,0 +1,54 @@
+{
+  "doctype": "Workspace",
+  "name": "Finance",
+  "title": "Finance",
+  "label": "Finance",
+  "module": "Biznapoa Healthcare",
+  "category": "Modules",
+  "icon": "dollar-sign",
+  "links": [
+    {
+      "label": "Account",
+      "type": "Link",
+      "link_to": "Account",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Payment Entry",
+      "type": "Link",
+      "link_to": "Payment Entry",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Financial Year",
+      "type": "Link",
+      "link_to": "Financial Year",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Patients",
+      "type": "Link",
+      "link_to": "Patient",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Employees",
+      "type": "Link",
+      "link_to": "Employee",
+      "link_type": "DocType"
+    }
+  ],
+  "shortcuts": [
+    {
+      "label": "New Payment",
+      "url": "/app/payment-entry/new",
+      "icon": "plus"
+    },
+    {
+      "label": "Chart of Accounts",
+      "url": "/app/account",
+      "icon": "book"
+    }
+  ],
+  "charts": []
+}

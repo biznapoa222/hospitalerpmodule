@@ -1,0 +1,54 @@
+{
+  "doctype": "Workspace",
+  "name": "WardManagement",
+  "title": "Ward Management",
+  "label": "Ward Management",
+  "module": "Biznapoa Healthcare",
+  "category": "Modules",
+  "icon": "home",
+  "links": [
+    {
+      "label": "Ward",
+      "type": "Link",
+      "link_to": "Ward",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Bed",
+      "type": "Link",
+      "link_to": "Bed",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Bed Allocation",
+      "type": "Link",
+      "link_to": "Bed Allocation",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Admissions",
+      "type": "Link",
+      "link_to": "Admission",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Patients",
+      "type": "Link",
+      "link_to": "Patient",
+      "link_type": "DocType"
+    }
+  ],
+  "shortcuts": [
+    {
+      "label": "Bed Allocation",
+      "url": "/app/bed-allocation/new",
+      "icon": "plus-square"
+    },
+    {
+      "label": "Ward List",
+      "url": "/app/ward",
+      "icon": "list"
+    }
+  ],
+  "charts": []
+}

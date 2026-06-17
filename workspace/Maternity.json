@@ -1,0 +1,54 @@
+{
+  "doctype": "Workspace",
+  "name": "Maternity",
+  "title": "Maternity",
+  "label": "Maternity",
+  "module": "Biznapoa Healthcare",
+  "category": "Modules",
+  "icon": "life-buoy",
+  "links": [
+    {
+      "label": "Delivery Record",
+      "type": "Link",
+      "link_to": "Delivery Record",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Newborn Record",
+      "type": "Link",
+      "link_to": "Newborn Record",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Patients",
+      "type": "Link",
+      "link_to": "Patient",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Appointments",
+      "type": "Link",
+      "link_to": "Appointment",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Admissions",
+      "type": "Link",
+      "link_to": "Admission",
+      "link_type": "DocType"
+    }
+  ],
+  "shortcuts": [
+    {
+      "label": "New Delivery",
+      "url": "/app/delivery-record/new",
+      "icon": "plus"
+    },
+    {
+      "label": "Newborn Records",
+      "url": "/app/newborn-record",
+      "icon": "baby"
+    }
+  ],
+  "charts": []
+}

@@ -1,0 +1,77 @@
+{
+  "doctype": "Workspace",
+  "name": "Clinical",
+  "title": "Clinical",
+  "label": "Clinical",
+  "module": "Biznapoa Healthcare",
+  "category": "Modules",
+  "icon": "heartbeat",
+  "links": [
+    {
+      "label": "Patients",
+      "type": "Link",
+      "link_to": "Patient",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Appointments",
+      "type": "Link",
+      "link_to": "Appointment",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Patient Visits",
+      "type": "Link",
+      "link_to": "Patient Visit",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Vital Signs",
+      "type": "Link",
+      "link_to": "Vital Signs",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Admissions",
+      "type": "Link",
+      "link_to": "Admission",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Therapy Plans",
+      "type": "Link",
+      "link_to": "Therapy Plan",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Medical Records",
+      "type": "Link",
+      "link_to": "Medical Record",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Patient Queue",
+      "type": "Link",
+      "link_to": "Patient Queue",
+      "link_type": "DocType"
+    }
+  ],
+  "shortcuts": [
+    {
+      "label": "New Visit",
+      "url": "/app/patient-visit/new",
+      "icon": "clipboard"
+    },
+    {
+      "label": "Record Vitals",
+      "url": "/app/vital-signs/new",
+      "icon": "activity"
+    },
+    {
+      "label": "Patient List",
+      "url": "/app/patient",
+      "icon": "users"
+    }
+  ],
+  "charts": []
+}

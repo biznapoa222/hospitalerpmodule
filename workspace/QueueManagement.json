@@ -1,0 +1,48 @@
+{
+  "doctype": "Workspace",
+  "name": "QueueManagement",
+  "title": "Queue Management",
+  "label": "Queue Management",
+  "module": "Biznapoa Healthcare",
+  "category": "Modules",
+  "icon": "list",
+  "links": [
+    {
+      "label": "Patient Queue",
+      "type": "Link",
+      "link_to": "Patient Queue",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Queue Display",
+      "type": "Link",
+      "link_to": "Queue Display",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Queue Settings",
+      "type": "Link",
+      "link_to": "Queue Settings",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Patients",
+      "type": "Link",
+      "link_to": "Patient",
+      "link_type": "DocType"
+    }
+  ],
+  "shortcuts": [
+    {
+      "label": "Queue Display",
+      "url": "/app/queue-display",
+      "icon": "tv"
+    },
+    {
+      "label": "Patient Queue",
+      "url": "/app/patient-queue",
+      "icon": "list"
+    }
+  ],
+  "charts": []
+}

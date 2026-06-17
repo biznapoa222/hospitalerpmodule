@@ -1,0 +1,54 @@
+{
+  "doctype": "Workspace",
+  "name": "Theatre",
+  "title": "Theatre",
+  "label": "Theatre",
+  "module": "Biznapoa Healthcare",
+  "category": "Modules",
+  "icon": "crosshairs",
+  "links": [
+    {
+      "label": "Theatre",
+      "type": "Link",
+      "link_to": "Theatre",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Equipment Category",
+      "type": "Link",
+      "link_to": "Equipment Category",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Equipment Maintenance",
+      "type": "Link",
+      "link_to": "Equipment Maintenance",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Medical Equipment",
+      "type": "Link",
+      "link_to": "Medical Equipment",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Patients",
+      "type": "Link",
+      "link_to": "Patient",
+      "link_type": "DocType"
+    }
+  ],
+  "shortcuts": [
+    {
+      "label": "Theatre Schedule",
+      "url": "/app/theatre",
+      "icon": "calendar"
+    },
+    {
+      "label": "Equipment Check",
+      "url": "/app/equipment-maintenance",
+      "icon": "tool"
+    }
+  ],
+  "charts": []
+}

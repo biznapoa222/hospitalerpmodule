@@ -1,0 +1,42 @@
+{
+  "doctype": "Workspace",
+  "name": "Purchase",
+  "title": "Purchase",
+  "label": "Purchase",
+  "module": "Biznapoa Healthcare",
+  "category": "Modules",
+  "icon": "shopping-cart",
+  "links": [
+    {
+      "label": "Batch",
+      "type": "Link",
+      "link_to": "Batch",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Drug Master",
+      "type": "Link",
+      "link_to": "Drug Master",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Equipment Category",
+      "type": "Link",
+      "link_to": "Equipment Category",
+      "link_type": "DocType"
+    }
+  ],
+  "shortcuts": [
+    {
+      "label": "New Batch",
+      "url": "/app/batch/new",
+      "icon": "plus"
+    },
+    {
+      "label": "Drug Master",
+      "url": "/app/drug-master",
+      "icon": "database"
+    }
+  ],
+  "charts": []
+}

@@ -1,0 +1,71 @@
+{
+  "doctype": "Workspace",
+  "name": "MedicalSuperintendent",
+  "title": "Medical Superintendent",
+  "label": "Medical Superintendent",
+  "module": "Biznapoa Healthcare",
+  "category": "Modules",
+  "icon": "shield",
+  "links": [
+    {
+      "label": "Employees",
+      "type": "Link",
+      "link_to": "Employee",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Departments",
+      "type": "Link",
+      "link_to": "Department",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Designations",
+      "type": "Link",
+      "link_to": "Designation",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Patients",
+      "type": "Link",
+      "link_to": "Patient",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Appointments",
+      "type": "Link",
+      "link_to": "Appointment",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Admissions",
+      "type": "Link",
+      "link_to": "Admission",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Leave Applications",
+      "type": "Link",
+      "link_to": "Leave Application",
+      "link_type": "DocType"
+    }
+  ],
+  "shortcuts": [
+    {
+      "label": "Employees",
+      "url": "/app/employee",
+      "icon": "users"
+    },
+    {
+      "label": "Departments",
+      "url": "/app/department",
+      "icon": "grid"
+    },
+    {
+      "label": "Patients",
+      "url": "/app/patient",
+      "icon": "user"
+    }
+  ],
+  "charts": []
+}

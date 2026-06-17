@@ -1,0 +1,64 @@
+{
+  "doctype": "Workspace",
+  "name": "Reception",
+  "title": "Reception",
+  "label": "Reception",
+  "module": "Biznapoa Healthcare",
+  "category": "Modules",
+  "icon": "hospital",
+  "links": [
+    {
+      "label": "Patients",
+      "type": "Link",
+      "link_to": "Patient",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Appointments",
+      "type": "Link",
+      "link_to": "Appointment",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Patient Visits",
+      "type": "Link",
+      "link_to": "Patient Visit",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Vital Signs",
+      "type": "Link",
+      "link_to": "Vital Signs",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Patient Queue",
+      "type": "Link",
+      "link_to": "Patient Queue",
+      "link_type": "DocType"
+    }
+  ],
+  "shortcuts": [
+    {
+      "label": "New Patient",
+      "url": "/app/patient/new",
+      "icon": "user-plus"
+    },
+    {
+      "label": "New Appointment",
+      "url": "/app/appointment/new",
+      "icon": "calendar-plus"
+    },
+    {
+      "label": "Queue Display",
+      "url": "/app/queue-display",
+      "icon": "tv"
+    },
+    {
+      "label": "Patient Queue",
+      "url": "/app/patient-queue",
+      "icon": "list"
+    }
+  ],
+  "charts": []
+}

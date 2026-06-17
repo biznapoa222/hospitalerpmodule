@@ -1,0 +1,48 @@
+{
+  "doctype": "Workspace",
+  "name": "Laboratory",
+  "title": "Laboratory",
+  "label": "Laboratory",
+  "module": "Biznapoa Healthcare",
+  "category": "Modules",
+  "icon": "flask",
+  "links": [
+    {
+      "label": "Lab Settings",
+      "type": "Link",
+      "link_to": "Lab Settings",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Radiology Requests",
+      "type": "Link",
+      "link_to": "Radiology Request",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Radiology Results",
+      "type": "Link",
+      "link_to": "Radiology Result",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Patients",
+      "type": "Link",
+      "link_to": "Patient",
+      "link_type": "DocType"
+    }
+  ],
+  "shortcuts": [
+    {
+      "label": "New Lab Request",
+      "url": "/app/radiology-request/new",
+      "icon": "plus-circle"
+    },
+    {
+      "label": "Lab Settings",
+      "url": "/app/lab-settings",
+      "icon": "settings"
+    }
+  ],
+  "charts": []
+}

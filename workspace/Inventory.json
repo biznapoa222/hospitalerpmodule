@@ -1,0 +1,48 @@
+{
+  "doctype": "Workspace",
+  "name": "Inventory",
+  "title": "Inventory",
+  "label": "Inventory",
+  "module": "Biznapoa Healthcare",
+  "category": "Modules",
+  "icon": "package",
+  "links": [
+    {
+      "label": "Drug Master",
+      "type": "Link",
+      "link_to": "Drug Master",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Batch",
+      "type": "Link",
+      "link_to": "Batch",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Equipment Category",
+      "type": "Link",
+      "link_to": "Equipment Category",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Medical Equipment",
+      "type": "Link",
+      "link_to": "Medical Equipment",
+      "link_type": "DocType"
+    }
+  ],
+  "shortcuts": [
+    {
+      "label": "Drug Master",
+      "url": "/app/drug-master",
+      "icon": "database"
+    },
+    {
+      "label": "Equipment",
+      "url": "/app/medical-equipment",
+      "icon": "tool"
+    }
+  ],
+  "charts": []
+}

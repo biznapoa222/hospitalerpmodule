@@ -1,0 +1,71 @@
+{
+  "doctype": "Workspace",
+  "name": "HRM",
+  "title": "HRM",
+  "label": "HRM",
+  "module": "Biznapoa Healthcare",
+  "category": "Modules",
+  "icon": "users",
+  "links": [
+    {
+      "label": "Employees",
+      "type": "Link",
+      "link_to": "Employee",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Leave Application",
+      "type": "Link",
+      "link_to": "Leave Application",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Leave Type",
+      "type": "Link",
+      "link_to": "Leave Type",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Shift Type",
+      "type": "Link",
+      "link_to": "Shift Type",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Shift Assignment",
+      "type": "Link",
+      "link_to": "Shift Assignment",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Department",
+      "type": "Link",
+      "link_to": "Department",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Designation",
+      "type": "Link",
+      "link_to": "Designation",
+      "link_type": "DocType"
+    }
+  ],
+  "shortcuts": [
+    {
+      "label": "New Employee",
+      "url": "/app/employee/new",
+      "icon": "user-plus"
+    },
+    {
+      "label": "New Leave",
+      "url": "/app/leave-application/new",
+      "icon": "calendar"
+    },
+    {
+      "label": "Shift Assignments",
+      "url": "/app/shift-assignment",
+      "icon": "clock"
+    }
+  ],
+  "charts": []
+}

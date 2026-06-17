@@ -1,0 +1,48 @@
+{
+  "doctype": "Workspace",
+  "name": "Pharmacy",
+  "title": "Pharmacy",
+  "label": "Pharmacy",
+  "module": "Biznapoa Healthcare",
+  "category": "Modules",
+  "icon": "briefcase",
+  "links": [
+    {
+      "label": "Pharmacy Dispensing",
+      "type": "Link",
+      "link_to": "Pharmacy Dispensing",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Drug Master",
+      "type": "Link",
+      "link_to": "Drug Master",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Drug Prescription",
+      "type": "Link",
+      "link_to": "Drug Prescription",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Patients",
+      "type": "Link",
+      "link_to": "Patient",
+      "link_type": "DocType"
+    }
+  ],
+  "shortcuts": [
+    {
+      "label": "New Dispensing",
+      "url": "/app/pharmacy-dispensing/new",
+      "icon": "plus"
+    },
+    {
+      "label": "Drug Master",
+      "url": "/app/drug-master",
+      "icon": "database"
+    }
+  ],
+  "charts": []
+}

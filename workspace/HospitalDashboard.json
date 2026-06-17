@@ -1,0 +1,124 @@
+{
+  "doctype": "Workspace",
+  "name": "HospitalDashboard",
+  "title": "Hospital Dashboard",
+  "label": "Hospital Dashboard",
+  "module": "Biznapoa Healthcare",
+  "category": "Modules",
+  "icon": "activity",
+  "links": [
+    {
+      "label": "Patients",
+      "type": "Link",
+      "link_to": "Patient",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Appointments",
+      "type": "Link",
+      "link_to": "Appointment",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Patient Visits",
+      "type": "Link",
+      "link_to": "Patient Visit",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Vital Signs",
+      "type": "Link",
+      "link_to": "Vital Signs",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Admissions",
+      "type": "Link",
+      "link_to": "Admission",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Pharmacy Dispensing",
+      "type": "Link",
+      "link_to": "Pharmacy Dispensing",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Radiology Requests",
+      "type": "Link",
+      "link_to": "Radiology Request",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Queue Display",
+      "type": "Link",
+      "link_to": "Queue Display",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Patient Queue",
+      "type": "Link",
+      "link_to": "Patient Queue",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Medical Record",
+      "type": "Link",
+      "link_to": "Medical Record",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Theatre",
+      "type": "Link",
+      "link_to": "Theatre",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Delivery Records",
+      "type": "Link",
+      "link_to": "Delivery Record",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Beds",
+      "type": "Link",
+      "link_to": "Bed",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Accounts",
+      "type": "Link",
+      "link_to": "Account",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Employees",
+      "type": "Link",
+      "link_to": "Employee",
+      "link_type": "DocType"
+    }
+  ],
+  "shortcuts": [
+    {
+      "label": "New Patient",
+      "url": "/app/patient/new",
+      "icon": "user-plus"
+    },
+    {
+      "label": "New Appointment",
+      "url": "/app/appointment/new",
+      "icon": "calendar-plus"
+    },
+    {
+      "label": "Queue Display",
+      "url": "/app/queue-display",
+      "icon": "tv"
+    },
+    {
+      "label": "New Payment",
+      "url": "/app/payment-entry/new",
+      "icon": "dollar-sign"
+    }
+  ],
+  "charts": []
+}

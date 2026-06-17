@@ -1,0 +1,60 @@
+{
+  "doctype": "Workspace",
+  "name": "Radiology",
+  "title": "Radiology",
+  "label": "Radiology",
+  "module": "Biznapoa Healthcare",
+  "category": "Modules",
+  "icon": "camera",
+  "links": [
+    {
+      "label": "Radiology Request",
+      "type": "Link",
+      "link_to": "Radiology Request",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Radiology Result",
+      "type": "Link",
+      "link_to": "Radiology Result",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Radiology Template",
+      "type": "Link",
+      "link_to": "Radiology Template",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Imaging Type",
+      "type": "Link",
+      "link_to": "Imaging Type",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Lab Settings",
+      "type": "Link",
+      "link_to": "Lab Settings",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Patients",
+      "type": "Link",
+      "link_to": "Patient",
+      "link_type": "DocType"
+    }
+  ],
+  "shortcuts": [
+    {
+      "label": "New Radiology Request",
+      "url": "/app/radiology-request/new",
+      "icon": "plus"
+    },
+    {
+      "label": "View Results",
+      "url": "/app/radiology-result",
+      "icon": "file-text"
+    }
+  ],
+  "charts": []
+}

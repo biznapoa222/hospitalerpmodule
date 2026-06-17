@@ -1,0 +1,54 @@
+{
+  "doctype": "Workspace",
+  "name": "HealthRecords",
+  "title": "Health Records",
+  "label": "Health Records",
+  "module": "Biznapoa Healthcare",
+  "category": "Modules",
+  "icon": "folder",
+  "links": [
+    {
+      "label": "Medical Record",
+      "type": "Link",
+      "link_to": "Medical Record",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Patients",
+      "type": "Link",
+      "link_to": "Patient",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Patient Visits",
+      "type": "Link",
+      "link_to": "Patient Visit",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Appointments",
+      "type": "Link",
+      "link_to": "Appointment",
+      "link_type": "DocType"
+    },
+    {
+      "label": "Vital Signs",
+      "type": "Link",
+      "link_to": "Vital Signs",
+      "link_type": "DocType"
+    }
+  ],
+  "shortcuts": [
+    {
+      "label": "All Records",
+      "url": "/app/medical-record",
+      "icon": "folder"
+    },
+    {
+      "label": "Patient List",
+      "url": "/app/patient",
+      "icon": "users"
+    }
+  ],
+  "charts": []
+}
